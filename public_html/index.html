@@ -5,89 +5,7 @@
     <title>MDX Tour</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        html,
-        body {
-            font-family: Roboto, Arial, sans-serif;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #leftPanel {
-            width: 408px;
-            position: relative;
-            height: 100%;
-            float: left;
-        }
-
-        #topPanel {
-            height: 64px;
-            background-color: #db4437;
-            padding: 0;
-        }
-
-        #topPanelTitle {
-            position: absolute;
-            left: 80px;
-            display: inline-block;
-            height: 64px;
-            max-width: -webkit-calc(100% - 184px);
-            max-width: calc(100% - 184px);
-            max-height: 64px;
-            line-height: 64px;
-            background-color: #db4437;
-            color: white;
-            white-space: nowrap;
-            font-size: 20px;
-            font-weight: 400;
-        }
-
-        #bottomPanel {
-            font-size: 12px;
-            font-weight: 300;
-            color: #222;
-            overflow-y: scroll;
-            overflow: hidden;
-        }
-
-        #info {
-            background-color: #f7f8f9;
-            position: relative;
-            padding: 14px 50px 14px 80px;
-            border-bottom: 1px solid #efefef;
-            color: rgba(0, 0, 0, 0.87);
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 20px;
-        }
-
-        #buildingDiv {
-            padding: 20px 24px 22px 30px;
-            margin: 22px 0 4px 50px;
-        }
-
-        .buildingItem {
-            height: 24px;
-            margin-top: 8px;
-            margin-bottom: 6px;
-        }
-
-        .buildingFont {
-            font-size: 14px;
-            display: inline-block;
-            max-width: calc(100% - 26px);
-            white-space: nowrap;
-            vertical-align: middle;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-weight: normal;
-        }
-
-        #map {
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/public_html/style.css">
 </head>
 
 <body>
@@ -103,85 +21,73 @@
             </div>
             <div id="buildingDiv">
                 <div id="buildingList">
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="0">
-
+                    <div class="buildingItem" index="0">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University Student Centre" aria-label="Middlesex University Student Centre">Middlesex University Student Centre</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="1">
-
+                    <div class="buildingItem" index="1">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University  Sports Field" aria-label="Middlesex University  Sports Field">Middlesex University Sports Field</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="2">
-
+                    <div class="buildingItem" index="2">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Sheppard Library, Middlesex University " aria-label="Sheppard Library, Middlesex University ">Sheppard Library, Middlesex University </div>
+                            <div class="buildingFont" data-tooltip="Sheppard Library " aria-label="Sheppard Library">Sheppard Library </div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="3">
-
+                    <div class="buildingItem" index="3">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Williams Building, Middlesex University " aria-label="Williams Building, Middlesex University ">Williams Building, Middlesex University </div>
+                            <div class="buildingFont" data-tooltip="Williams Building " aria-label="Williams Building ">Williams Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="4">
-
+                    <div class="buildingItem" index="4">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="College Building and Quadrangle, Middlesex University " aria-label="College Building and Quadrangle, Middlesex University ">College Building and Quadrangle, Middlesex University </div>
+                            <div class="buildingFont" data-tooltip="College Building and Quadrangle " aria-label="College Building and Quadrangle ">College Building and Quadrangle </div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="5">
-
+                    <div class="buildingItem" index="5">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="HSBC Cashpoint" aria-label="HSBC Cashpoint">HSBC Cashpoint</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="6">
-
+                    <div class="buildingItem" index="6">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="New Teaching and Research Building (Opening September 2008) at Middlesex University Hendon Campus" aria-label="New Teaching and Research Building (Opening September 2008) at Middlesex University Hendon Campus">New Teaching and Research Building (Opening September 2008) at Middlesex University Hendon Campus</div>
+                            <div class="buildingFont" data-tooltip="New Teaching and Research Building (Opening September 2008)" aria-label="New Teaching and Research Building (Opening September 2008)">New Teaching and Research Building (Opening September 2008)</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="7">
 
+                    <div class="buildingItem" index="7">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Usher Hall, Middlesex University " aria-label="Usher Hall, Middlesex University ">Usher Hall, Middlesex University </div>
+                            <div class="buildingFont" data-tooltip="Usher Hall " aria-label="Usher Hall ">Usher Hall </div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="8">
-
+                    <div class="buildingItem" index="8">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Fenella Building" aria-label="Fenella Building">Fenella Building</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="9">
-
+                    <div class="buildingItem" index="9">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Ravensfield Building" aria-label="Ravensfield Building">Ravensfield Building</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="10">
-
+                    <div class="buildingItem" index="10">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hendon Fire Station" aria-label="Hendon Fire Station">Hendon Fire Station</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="11">
-
+                    <div class="buildingItem" index="11">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hendon Library" aria-label="Hendon Library">Hendon Library</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="12">
-
+                    <div class="buildingItem" index="12">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hendon Town Hall" aria-label="Hendon Town Hall">Hendon Town Hall</div>
                         </div>
                     </div>
-                    <div class="buildingItem pbTTYe-ibnC6b-d6wfac" index="13">
+                    <div class="buildingItem" index="13">
 
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University, Hendon Campus" aria-label="Middlesex University, Hendon Campus">Middlesex University, Hendon Campus</div>

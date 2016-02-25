@@ -2,15 +2,45 @@
 <html>
 
 <head>
-    <title>TODO supply a title</title>
+    <title>MDX Tour</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         html,
         body {
+            font-family: Roboto, Arial, sans-serif;
             height: 100%;
             margin: 0;
             padding: 0;
+        }
+
+        #leftPanel {
+            width: 408px;
+            position: relative;
+            height: 100%;
+            float: left;
+        }
+
+        #topPanel {
+            height: 64px;
+            background-color: #db4437;
+            padding: 0;
+        }
+
+        #topPanelTitle {
+            position: absolute;
+            left: 80px;
+            display: inline-block;
+            height: 64px;
+            max-width: -webkit-calc(100% - 184px);
+            max-width: calc(100% - 184px);
+            max-height: 64px;
+            line-height: 64px;
+            background-color: #db4437;
+            color: white;
+            white-space: nowrap;
+            font-size: 20px;
+            font-weight: 400;
         }
 
         #map {
@@ -20,6 +50,15 @@
 </head>
 
 <body>
+    <div id="leftPanel">
+        <div id="topPanel">
+            <div id="topPanelTitle">
+                <div data-tooltip="Middlesex University, Hendon Campus" aria-label="Middlesex University, Hendon Campus">Middlesex University</div>
+            </div>
+        </div>
+        <p>Side Panel</p>
+        <p>it will list the building names</p>
+    </div>
     <div id="map"></div>
     <script>
         var map;
@@ -27,7 +66,7 @@
             lat: 51.5896908,
             lng: -0.2287733
         };
-        var mdxPin = 'http://i.imgur.com/X6ZrT04.png';
+        var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
 
 
         /**
@@ -76,6 +115,7 @@
             var mdxMarker = new google.maps.Marker({
                 position: mdxCenter,
                 map: map,
+                animation: google.maps.Animation.DROP,
                 icon: mdxPin
             });
 

@@ -43,6 +43,25 @@
             font-weight: 400;
         }
 
+        #bottomPanel {
+            font-size: 12px;
+            font-weight: 300;
+            color: #222;
+            overflow-y: scroll;
+            overflow: hidden;
+        }
+
+        #info {
+            background-color: #f7f8f9;
+            position: relative;
+            padding: 14px 50px 14px 80px;
+            border-bottom: 1px solid #efefef;
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+
         #map {
             height: 100%;
         }
@@ -56,8 +75,11 @@
                 <div data-tooltip="Middlesex University, Hendon Campus" aria-label="Middlesex University, Hendon Campus">Middlesex University</div>
             </div>
         </div>
-        <p>Side Panel</p>
-        <p>it will list the building names</p>
+        <div id="bottomPanel">
+            <div id="info">
+                Hendon Campus is Middlesex University’s most popular campus and home to the Middlesex University Business School and the School of Computing Science. Significant investment has taken place at the campus since 2002; investment continues to deliver an outstanding centre of teaching and research.
+            </div>
+        </div>
     </div>
     <div id="map"></div>
     <script>

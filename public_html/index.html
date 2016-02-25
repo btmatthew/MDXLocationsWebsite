@@ -21,7 +21,7 @@
             </div>
             <div id="buildingDiv">
                 <div id="buildingList">
-                    <div class="buildingItem" index="0" onclick="changeLocation(mdxCenter)">
+                    <div class="buildingItem" index="0" onclick="changeLocation(mdxCente)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University Student Centre" aria-label="Middlesex University Student Centre">x Middlesex University Student Centre</div>
                         </div>
@@ -31,7 +31,7 @@
                             <div class="buildingFont" data-tooltip="Middlesex University  Sports Field" aria-label="Middlesex University  Sports Field">x Middlesex University Sports Field</div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary)">
+                    <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary,mdxSheppardLibraryDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Sheppard Library " aria-label="Sheppard Library">Sheppard Library </div>
                         </div>
@@ -183,16 +183,19 @@
             lat: 0,
             lng: 0
         };
+        
+        var mdxSheppardLibraryDesc ="The Sheppard Library, based at our Hendon Campus, is Middlesex University's state of the art Learning Resource Centre offering Middlesex students full access to books, electronic journals, language help, photocopying and print services as well as being the home of our extensive web resources and audio visual services.";
 
         var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
 
-        function changeLocation(location) {
+        function changeLocation(location, desc) {
             map.setCenter(location);
             if (location == mdxCenter) {
                 map.setZoom(18);
             } else {
                 map.setZoom(20);
             }
+            $("topPanelTitle").update(desc);
         }
 
         function initMap() {

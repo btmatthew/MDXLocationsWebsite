@@ -21,7 +21,7 @@
             </div>
             <div id="buildingDiv">
                 <div id="buildingList">
-                    <div class="buildingItem" index="0" onclick="changeLocation(mdxHouse,mdxhouseDesc)">
+                    <div class="buildingItem" index="0" onclick="changeLocation(mdxHouse,mdxhouseDesc,20)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University Student Centre" aria-label="Middlesex University Student Centre">x Middlesex University Student Centre</div>
                         </div>
@@ -31,27 +31,27 @@
                             <div class="buildingFont" data-tooltip="Middlesex University  Sports Field" aria-label="Middlesex University  Sports Field">x Middlesex University Sports Field</div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary,mdxShepardLibraryDesc)">
+                    <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary,mdxShepardLibraryDesc,19)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Sheppard Library " aria-label="Sheppard Library">Sheppard Library </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="3" onclick="changeLocation(mdxWilliams, mdxWilliamsDesc)">
+                    <div class="buildingItem" index="3" onclick="changeLocation(mdxWilliams, mdxWilliamsDesc,19)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Williams Building " aria-label="Williams Building ">Williams Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="4" onclick="changeLocation(mdxHatchcroft,mdxHatchcroftDesc)">
+                    <div class="buildingItem" index="4" onclick="changeLocation(mdxHatchcroft,mdxHatchcroftDesc,19)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hatchcroft Building " aria-label="Hatchcroft Building ">Hatchcroft Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="5" onclick="changeLocation(mdxGrove,mdxGroveDesc)">
+                    <div class="buildingItem" index="5" onclick="changeLocation(mdxGrove,mdxGroveDesc,20)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Grove Building " aria-label="Grove Building ">Grove Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="6" onclick="changeLocation(mdxCollege,mdxCollegeDesc)">
+                    <div class="buildingItem" index="6" onclick="changeLocation(mdxCollege,mdxCollegeDesc,19)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="College Building and Quadrangle " aria-label="College Building and Quadrangle ">College Building and Quadrangle </div>
                         </div>
@@ -193,14 +193,10 @@
 
         var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
 
-        function changeLocation(location, desc) {
+        function changeLocation(location, desc,zoom) {
             map.setCenter(location);
+            map.setZoom(zoom);
             document.getElementById("info").innerHTML=(desc);
-            if (location == mdxCenter) {
-                map.setZoom(18);
-            } else {
-                map.setZoom(20);
-            }
 
         }
 

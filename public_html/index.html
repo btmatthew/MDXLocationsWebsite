@@ -21,7 +21,7 @@
             </div>
             <div id="buildingDiv">
                 <div id="buildingList">
-                    <div class="buildingItem" index="0" onclick="changeLocation(mdxCente)">
+                    <div class="buildingItem" index="0" onclick="changeLocation(mdxHouse,mdxhouseDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University Student Centre" aria-label="Middlesex University Student Centre">x Middlesex University Student Centre</div>
                         </div>
@@ -31,27 +31,27 @@
                             <div class="buildingFont" data-tooltip="Middlesex University  Sports Field" aria-label="Middlesex University  Sports Field">x Middlesex University Sports Field</div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary,mdxSheppardLibraryDesc)">
+                    <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary,mdxShepardLibraryDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Sheppard Library " aria-label="Sheppard Library">Sheppard Library </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="3" onclick="changeLocation(mdxWilliams)">
+                    <div class="buildingItem" index="3" onclick="changeLocation(mdxWilliams, mdxWilliamsDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Williams Building " aria-label="Williams Building ">Williams Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="4" onclick="changeLocation(mdxHatchcroft)">
+                    <div class="buildingItem" index="4" onclick="changeLocation(mdxHatchcroft,mdxHatchcroftDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hatchcroft Building " aria-label="Hatchcroft Building ">Hatchcroft Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="5" onclick="changeLocation(mdxGrove)">
+                    <div class="buildingItem" index="5" onclick="changeLocation(mdxGrove,mdxGroveDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Grove Building " aria-label="Grove Building ">Grove Building </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="6" onclick="changeLocation(mdxCollege)">
+                    <div class="buildingItem" index="6" onclick="changeLocation(mdxCollege,mdxCollegeDesc)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="College Building and Quadrangle " aria-label="College Building and Quadrangle ">College Building and Quadrangle </div>
                         </div>
@@ -104,9 +104,9 @@
     <div id="map"></div>
     <script>
         var map;
-        var mdxCenter = {
-            lat: 51.5896908,
-            lng: -0.2287733
+        var mdxHouse = {
+            lat: 51.58983943,
+            lng: -0.23014024
         };
 
         var mdxStudentCentre = {
@@ -183,24 +183,30 @@
             lat: 0,
             lng: 0
         };
-        
-        var mdxSheppardLibraryDesc ="The Sheppard Library, based at our Hendon Campus, is Middlesex University's state of the art Learning Resource Centre offering Middlesex students full access to books, electronic journals, language help, photocopying and print services as well as being the home of our extensive web resources and audio visual services.";
+
+        var mdxCollegeDesc = "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year. The Middlesex University Campus Reception and Student Information booth are located in the quadrangle.Student Services (Student Office, Money and Welfare Advice, Counsellingand Students with Children) operate on the ground floor of The CollegeBuilding. Their opening hours are 9.30am - 3.30pm from Monday to Friday.";
+        var mdxWilliamsDesc = "The Williams Building at Hendon Campus, houses a number of teaching spaces and student facilities including The Middlesex University Graduate Centre, Postgraduate Common Room, Student Placement Office and Refectory.";
+        var mdxHatchcroftDesc = "Building has begun on our new teaching and research building at Hendon Campus.This will opening in September 2008 to coincide with the relocation of Middlesex University's Health and Social Sciences Programme to Hendon Campus.This building will be comprised of two large lecture theatres and specialist laboratories for Psychology, Biomedical Science and Computing Science.";
+        var mdxShepardLibraryDesc = "The Sheppard Library, based at our Hendon Campus, is Middlesex University's state of the art Learning Resource Centre offering Middlesex students full access to books, electronic journals, language help, photocopying and print services as well as being the home of our extensive web resources and audio visual services.";
+        var mdxhouseDesc = "The new Student Centre at Hendon campus will provide all the aspects of university life that aren’t about lectures, tutorials, deadlines and exams. So entertainment and refreshments, including a Student bar, will be available, as well as fitness facilities for all students, whatever they are studying. There will also be a nursery for the children of Middlesex’s many mature students. The Student Centre will open in September 2008 to coincide with the relocation to Hendon of the Middlesex University Health and Social Sciences programmes.";
+        var mdxGroveDesc = " Teaching is now carried out in the Grove at Hendon, an £80m centre for creative courses, though Middlesex art and design began life as Hornsey College of Art, founded in 1880 – a British art institution, renowned for its experimental and progressive approach to art and design education.";
 
         var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
 
         function changeLocation(location, desc) {
             map.setCenter(location);
+            document.getElementById("info").innerHTML=(desc);
             if (location == mdxCenter) {
                 map.setZoom(18);
             } else {
                 map.setZoom(20);
             }
-            $("info").update(desc);
+
         }
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: mdxCenter,
+                center: mdxHouse,
                 zoom: 18,
                 disableDefaultUI: true
             });

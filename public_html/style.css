@@ -6,6 +6,8 @@ body {
     padding: 0;
 }
 
+
+/*
 #leftPanel {
     width: 408px;
     position: relative;
@@ -77,7 +79,97 @@ body {
     font-weight: normal;
     cursor: pointer;
 }
+*/
+
+#mdxLogo {
+    width: 16.5%;
+    height: 33%;
+    padding: 0;
+    float: left;
+    background-color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#mdxLogo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+}
+
+#buildingName {
+    height: 33%;
+    padding: 0;
+    background-color: blue;
+    padding-left: 40px;
+    /*    line-height: 60px;*/
+    color: white;
+    white-space: nowrap;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+#buildingList {
+    width: 16.5%;
+    height: 66%;
+    float: left;
+    background-color: yellow;
+}
+
+#buildingDetails {
+    width: 33%;
+    height: 66%;
+    float: left;
+}
+
+#buildingDescription {
+    width: 100%;
+    height: 50%;
+    background-color: #f7f8f9;
+    position: relative;
+    border-bottom: 1px solid #efefef;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+#buildingDescription p {
+    background-color: #f7f8f9;
+    padding: 14px 50px 14px 80px;
+}
+
+#buildingImages {
+    width: 100%;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+#buildingImages img {
+    width: 100%;
+    height: 100%;
+}
 
 #map {
-    height: 100%;
+    height: 66%;
+    width: 50%;
+    background-color: blanchedalmond;
+}
+.buildingItem {
+    height: 24px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.buildingItem p {
+    font-size: 14px;
+    display: inline-block;
+    max-width: calc(100% - 26px);
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    cursor: pointer;
 }

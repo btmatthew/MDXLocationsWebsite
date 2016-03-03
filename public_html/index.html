@@ -9,99 +9,75 @@
 </head>
 
 <body>
-    <div id="leftPanel">
-        <div id="topPanel">
-            <div id="topPanelTitle">
-                <div id="buildingName" data-tooltip="Middlesex University" aria-label="Middlesex University">Middlesex University</div>
-            </div>
+    <!-- START top screen-->
+    <div id="mdxLogo"><img src="https://www.mdx.ac.uk/__data/assets/image/0019/9118/london-logo.png" /></div>
+    <div id="buildingName">Middlesex University</div>
+    <!-- END top screen-->
+
+    <!-- START bottom left screens-->
+    <div id="buildingList">
+        <div class="buildingItem" onclick="changeLocation('Student Centre',mdxHouse,mdxhouseDesc,20)">
+            <p>- Student Centre</p>
         </div>
-        <div id="bottomPanel">
-            <div id="info">
-                Hendon Campus is Middlesex University’s most popular campus and home to the Middlesex University Business School and the School of Computing Science. Significant investment has taken place at the campus since 2002; investment continues to deliver an outstanding centre of teaching and research.
-            </div>
-            <div id="buildingDiv">
-                <div id="buildingList">
-                    <div class="buildingItem" onclick="changeLocation('Student Centre',mdxHouse,mdxhouseDesc,20)">
-                        <div class="buildingItem">
-                            <!-- Not sure which of the 6 buildings is the Student Centre -->
-                            <div class="buildingFont" data-tooltip="Student Centre" aria-label="Student Centre">- Student Centre</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Sports Field',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Sports Field" aria-label="Sports Field">x Sports Field</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Sheppard Library',mdxSheppardLibrary,mdxShepardLibraryDesc,19)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Sheppard Library " aria-label="Sheppard Library">✓ Sheppard Library </div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Williams Building',mdxWilliams, mdxWilliamsDesc,19)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Williams Building " aria-label="Williams Building ">✓ Williams Building </div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Hatchcroft Building',mdxHatchcroft,mdxHatchcroftDesc,19)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Hatchcroft Building " aria-label="Hatchcroft Building ">✓ Hatchcroft Building </div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Grove Building',mdxGrove,mdxGroveDesc,20)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Grove Building " aria-label="Grove Building ">✓ Grove Building </div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('College Building and Quadrangle',mdxCollege,mdxCollegeDesc,19)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="College Building and Quadrangle " aria-label="College Building and Quadrangle ">✓ College Building and Quadrangle </div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('HSBC Cashpoint',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="HSBC Cashpoint" aria-label="HSBC Cashpoint">x HSBC Cashpoint</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('??',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="New Teaching and Research Building (Opening September 2008)" aria-label="New Teaching and Research Building (Opening September 2008)">x New Teaching and Research Building (Opening September 2008)</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Usher Hall',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Usher Hall " aria-label="Usher Hall ">x Usher Hall </div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Fenella Building',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Fenella Building" aria-label="Fenella Building">x Fenella Building</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Ravensfield Building',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Ravensfield Building" aria-label="Ravensfield Building">x Ravensfield Building</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Hendon Fire Station',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Hendon Fire Station" aria-label="Hendon Fire Station">x Hendon Fire Station</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Hendon Library',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Hendon Library" aria-label="Hendon Library">x Hendon Library</div>
-                        </div>
-                    </div>
-                    <div class="buildingItem" onclick="changeLocation('Hendon Town Hall',mdxCenter)">
-                        <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Hendon Town Hall" aria-label="Hendon Town Hall">x Hendon Town Hall</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="buildingItem" onclick="changeLocation('Sports Field',mdxCenter)">
+            <p>x Sports Field</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation('Sheppard Library',mdxSheppardLibrary,mdxShepardLibraryDesc,19)">
+            <p>✓ Sheppard Library </p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation('Williams Building',mdxWilliams, mdxWilliamsDesc,19)">
+            <p>✓ Williams Building </p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation('Hatchcroft Building',mdxHatchcroft,mdxHatchcroftDesc,19)">
+            <p>✓ Hatchcroft Building </p>
+        </div>
+        <div class="buildingItem">
+            <p>✓ Grove Building </p>
+        </div>
+        <div class="buildingItem">
+            <p>✓ College Building and Quadrangle </p>
+        </div>
+        <div class="buildingItem">
+            <p>x HSBC Cashpoint</p>
+        </div>
+        <div class="buildingItem">
+            <p>x New Teaching and Research Building (Opening September 2008)</p>
+        </div>
+        <div class="buildingItem">
+            <p>x Usher Hall </p>
+        </div>
+        <div class="buildingItem">
+            <p>x Fenella Building</p>
+        </div>
+        <div class="buildingItem">
+            <p>x Ravensfield Building</p>
+        </div>
+        <div class="buildingItem">
+            <p>x Hendon Fire Station</p>
+        </div>
+        <div class="buildingItem">
+            <p>x Hendon Library</p>
+        </div>
+        <div class="buildingItem">
+            <p>x Hendon Town Hall</p>
         </div>
     </div>
+
+    <div id="buildingDetails">
+        <div id="buildingDescription">
+            <p>Hendon Campus is Middlesex University’s most popular campus and home to the Middlesex University Business School and the School of Computing Science. Significant investment has taken place at the campus since 2002; investment continues to deliver an outstanding centre of teaching and research.</p>
+        </div>
+        <div id="buildingImages">
+            <!--            <img src="http://www.mdx.ac.uk/__data/assets/image/0019/131923/Quad_final-2.jpg">-->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Middlesex_University_Hendon_Campus.jpg">
+        </div>
+    </div>
+    <!-- END bottom left screens-->
+
+    <!-- START bottom right screens-->
     <div id="map"></div>
+    <!-- END bottom right screens-->
+
     <script>
         var map;
         var mdxHouse = {

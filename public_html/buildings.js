@@ -12,7 +12,7 @@ var collegeBuilding = {
 };
 
 var hatchcroft = {
-    name: "",
+    name: "Hatchcroft",
     description: "The £36 million Hatchcroft building is home to world-class science research and teaching at Middlesex. Specialist spaces for biomedical and environmental sciences, computer science, psychology and sport and human performance allow students to work in some of the best-equipped laboratories in the UK. Hatchcroft also houses modern lecture theatres and advanced computer laboratories.",
     image: "",
     location: {
@@ -23,7 +23,7 @@ var hatchcroft = {
 };
 
 var building9 = {
-    name: "",
+    name: "Building 9",
     description: "Building 9 houses our Education department. The recently refurbished building includes a number of flexible areas for teaching, including a designated early childhood play area and a modern ICT suite.",
     image: "",
     location: {
@@ -34,7 +34,7 @@ var building9 = {
 };
 
 var hendonTownHall = {
-    name: "",
+    name: "Hendon Town Hall",
     description: "The Hendon Town Hall, which was built in 1901, features original council chambers which provide the perfect venue to hold moots (mock court), as well as law lectures and debates.",
     image: "",
     location: {
@@ -45,7 +45,7 @@ var hendonTownHall = {
 };
 
 var theGrove = {
-    name: "",
+    name: "The Grove",
     description: "Our £80 million Grove is home to some of the best creative facilities in the UK. The building houses state-of-the-art TV studios, workshops for fashion, textile and jewellery design, a ceramics studio, TV and film production suites, 3D workshops and extensive photography facilities. The Grove is the place to explore traditional and new techniques across the creative disciplines.",
     image: "",
     location: {
@@ -56,7 +56,7 @@ var theGrove = {
 };
 
 var mdxHouse = {
-    name: "",
+    name: "MDX House",
     description: "MDX House is the social centre of our campus, where students can socialise over a drink or a meal in our newly-refurbished bar and dining areas, enjoy live music and performance or a game of pool. The MDX House precinct is also home to the Fitness Pod, our campus gym, and a variety of sporting facilities – including a Real Tennis Court, AstroTurf pitches, multi-use courts and a bouldering wall.",
     image: "",
     location: {
@@ -67,7 +67,7 @@ var mdxHouse = {
 };
 
 var theSheppardLibrary = {
-    name: "",
+    name: "The Sheppard Library",
     description: "The Sheppard Library is open 24 hours a day, seven days a week during term time. Our collection encompasses more than half a million items, including 350,000 books and e-books and over 24,000 online journals. The library is home to more than 1,000 study areas and 600 computing spaces, and specialist staff are on hand to offer guidance and support to help students meet their study needs.",
     image: "",
     location: {
@@ -78,7 +78,7 @@ var theSheppardLibrary = {
 };
 
 var williamsBuilding = {
-    name: "",
+    name: "Williams Building",
     description: "The Williams Building is our hub for students studying Business and Law at Middlesex, and home to Library@Williams, a dedicated research and study space.",
     image: "",
     location: {
@@ -89,7 +89,7 @@ var williamsBuilding = {
 };
 
 var modelFarmhouse = {
-    name: "",
+    name: "Model Farmhouse",
     description: "The Model Farmhouse is home to our research and business centre. It also plays host to various events and conferences in its designated meeting and seminar rooms.",
     image: "",
     location: {
@@ -100,7 +100,7 @@ var modelFarmhouse = {
 };
 
 var ravensfield = {
-    name: "",
+    name: "Ravensfield",
     description: "Ravensfield House is home to the Theatre Arts degrees at Middlesex. It houses a fully operational theatre which hosts regular performances, as well as a series of workshops, rehearsal spaces, dressing rooms and a costume store.",
     image: "",
     location: {
@@ -111,7 +111,7 @@ var ravensfield = {
 };
 
 var usherHall = {
-    name: "",
+    name: "Usher Hall",
     description: "Middlesex University's bright, modern Halls of Residence allow you to enjoy campus life on your doorstep.",
     image: "",
     location: {
@@ -122,7 +122,7 @@ var usherHall = {
 };
 
 var sportsField = {
-    name: "",
+    name: "Sports Field",
     description: "",
     image: "",
     location: {

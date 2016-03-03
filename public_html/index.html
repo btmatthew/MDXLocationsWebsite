@@ -34,8 +34,8 @@
         <div class="buildingItem">
             <p>✓ Grove Building </p>
         </div>
-        <div class="buildingItem">
-            <p>✓ College Building and Quadrangle </p>
+        <div class="buildingItem" onclick="changeLocationObject(collegeBuilding)">
+            <p>✓ College Building</p>
         </div>
         <div class="buildingItem">
             <p>x HSBC Cashpoint</p>
@@ -67,9 +67,8 @@
         <div id="buildingDescription">
             <p>Hendon Campus is Middlesex University’s most popular campus and home to the Middlesex University Business School and the School of Computing Science. Significant investment has taken place at the campus since 2002; investment continues to deliver an outstanding centre of teaching and research.</p>
         </div>
-        <div id="buildingImages">
-            <!--            <img src="http://www.mdx.ac.uk/__data/assets/image/0019/131923/Quad_final-2.jpg">-->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Middlesex_University_Hendon_Campus.jpg">
+        <div id="buildingImageDiv">
+            <img id="buildingImage" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Middlesex_University_Hendon_Campus.jpg">
         </div>
     </div>
     <!-- END bottom left screens-->
@@ -80,6 +79,39 @@
 
     <script>
         var map;
+
+        var collegeBuilding = {
+            name: "College Building",
+            description: "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year. The Middlesex University Campus Reception and Student Information booth are located in the quadrangle.Student Services (Student Office, Money and Welfare Advice, Counsellingand Students with Children) operate on the ground floor of The CollegeBuilding. Their opening hours are 9.30am - 3.30pm from Monday to Friday.",
+            image: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Middlesex_University_Hendon_Campus.jpg",
+            location: {
+                lat: 51.58983943,
+                lng: -0.22894397
+            },
+            zoom: 19
+        };
+
+        var collegeBuilding = {
+            name: "College Building",
+            description: "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year. The Middlesex University Campus Reception and Student Information booth are located in the quadrangle.Student Services (Student Office, Money and Welfare Advice, Counsellingand Students with Children) operate on the ground floor of The CollegeBuilding. Their opening hours are 9.30am - 3.30pm from Monday to Friday.",
+            image: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Middlesex_University_Hendon_Campus.jpg",
+            location: {
+                lat: 51.58983943,
+                lng: -0.22894397
+            },
+            zoom: 19
+        };
+
+        function changeLocationObject(buildingObject) {
+            document.getElementById("buildingName").innerHTML = buildingObject.name;
+            document.getElementById("buildingDescription").innerHTML = (buildingObject.description);
+            document.getElementById('buildingImage').src = buildingObject.image;
+            map.setCenter(buildingObject.location);
+            map.setZoom(buildingObject.zoom);
+        }
+
+
+
         var mdxHouse = {
             lat: 51.58983943,
             lng: -0.23014024
@@ -172,7 +204,7 @@
         function changeLocation(buildingName, location, desc, zoom) {
             map.setCenter(location);
             map.setZoom(zoom);
-            document.getElementById("info").innerHTML = (desc);
+            document.getElementById("buildingDescription").innerHTML = (desc);
             document.getElementById("buildingName").innerHTML = buildingName;
 
         }

@@ -23,14 +23,14 @@
                 <div id="buildingList">
                     <div class="buildingItem" index="0" onclick="changeLocation(mdxHouse,mdxhouseDesc,20)">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Middlesex University Student Centre" aria-label="Middlesex University Student Centre">x Middlesex University Student Centre</div>
+                            <div class="buildingFont" data-tooltip="MDX House" aria-label="MDX House">MDX House</div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="1" onclick="changeLocation(mdxCenter)">
+                   <!-- <div class="buildingItem" index="1" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Middlesex University  Sports Field" aria-label="Middlesex University  Sports Field">x Middlesex University Sports Field</div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="buildingItem" index="2" onclick="changeLocation(mdxSheppardLibrary,mdxShepardLibraryDesc,19)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Sheppard Library " aria-label="Sheppard Library">Sheppard Library </div>
@@ -56,45 +56,45 @@
                             <div class="buildingFont" data-tooltip="College Building and Quadrangle " aria-label="College Building and Quadrangle ">College Building and Quadrangle </div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="7" onclick="changeLocation(mdxCenter)">
+                    <!--<div class="buildingItem" index="7" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="HSBC Cashpoint" aria-label="HSBC Cashpoint">x HSBC Cashpoint</div>
                         </div>
-                    </div>
-                    <div class="buildingItem" index="8" onclick="changeLocation(mdxCenter)">
+                    </div>-->
+                    <!--<div class="buildingItem" index="8" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="New Teaching and Research Building (Opening September 2008)" aria-label="New Teaching and Research Building (Opening September 2008)">x New Teaching and Research Building (Opening September 2008)</div>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="buildingItem" index="9" onclick="changeLocation(mdxCenter)">
+                    <!--<div class="buildingItem" index="9" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Usher Hall " aria-label="Usher Hall ">x Usher Hall </div>
                         </div>
-                    </div>
-                    <div class="buildingItem" index="10" onclick="changeLocation(mdxCenter)">
+                    </div>-->
+                    <!--<div class="buildingItem" index="10" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Fenella Building" aria-label="Fenella Building">x Fenella Building</div>
                         </div>
-                    </div>
-                    <div class="buildingItem" index="11" onclick="changeLocation(mdxCenter)">
+                    </div>-->
+                    <div class="buildingItem" index="11" onclick="changeLocation(mdxRavensfield,ravensfields,19)">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Ravensfield Building" aria-label="Ravensfield Building">x Ravensfield Building</div>
+                            <div class="buildingFont" data-tooltip="Ravensfield Building" aria-label="Ravensfield Building">Ravensfield Building</div>
                         </div>
                     </div>
-                    <div class="buildingItem" index="12" onclick="changeLocation(mdxCenter)">
+                    <!--<div class="buildingItem" index="12" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hendon Fire Station" aria-label="Hendon Fire Station">x Hendon Fire Station</div>
                         </div>
-                    </div>
-                    <div class="buildingItem" index="13" onclick="changeLocation(mdxCenter)">
+                    </div>-->
+                    <!--<div class="buildingItem" index="13" onclick="changeLocation(mdxCenter)">
                         <div class="buildingItem">
                             <div class="buildingFont" data-tooltip="Hendon Library" aria-label="Hendon Library">x Hendon Library</div>
                         </div>
-                    </div>
-                    <div class="buildingItem" index="14" onclick="changeLocation(mdxCenter)">
+                    </div>-->
+                   -- <div class="buildingItem" index="14" onclick="mapLoop()">
                         <div class="buildingItem">
-                            <div class="buildingFont" data-tooltip="Hendon Town Hall" aria-label="Hendon Town Hall">x Hendon Town Hall</div>
+                            <div class="buildingFont" data-tooltip="Loop" aria-label="Loop">x Loop</div>
                         </div>
                     </div>
                 </div>
@@ -105,13 +105,8 @@
     <script>
         var map;
         var mdxHouse = {
-            lat: 51.58983943,
-            lng: -0.23014024
-        };
-
-        var mdxStudentCentre = {
-            lat: 0,
-            lng: 0
+            lat: 51.589960,
+            lng: -0.230627
         };
 
         var mdxSportsField = {
@@ -144,53 +139,23 @@
             lng: -0.22894397
         };
 
-        var mdxHSBC = {
-            lat: 0,
-            lng: 0
-        };
 
-        var mdxNewBuilding = {
-            lat: 0,
-            lng: 0
-        };
-
-        var mdxUsherHall = {
-            lat: 0,
-            lng: 0
-        };
-
-        var mdxFenella = {
-            lat: 0,
-            lng: 0
-        };
 
         var mdxRavensfield = {
-            lat: 0,
-            lng: 0
+            lat: 51.588642,
+            lng: -0.227862
         };
 
-        var mdxHendonFireStation = {
-            lat: 0,
-            lng: 0
-        };
 
-        var mdxHendonLibrary = {
-            lat: 0,
-            lng: 0
-        };
 
-        var mdxHendonTownHall = {
-            lat: 0,
-            lng: 0
-        };
-
-        var mdxCollegeDesc = "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year. The Middlesex University Campus Reception and Student Information booth are located in the quadrangle.Student Services (Student Office, Money and Welfare Advice, Counsellingand Students with Children) operate on the ground floor of The CollegeBuilding. Their opening hours are 9.30am - 3.30pm from Monday to Friday.";
-        var mdxWilliamsDesc = "The Williams Building at Hendon Campus, houses a number of teaching spaces and student facilities including The Middlesex University Graduate Centre, Postgraduate Common Room, Student Placement Office and Refectory.";
+        var mdxCollegeDesc = "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year. The Middlesex University Campus Reception and Student Information booth are located in the quadrangle.";
+        var mdxWilliamsDesc = "The Williams Building is our hub for students studying Business and Law at Middlesex, and home to Library@Williams, a dedicated research and study space.";
         var mdxHatchcroftDesc = "Building has begun on our new teaching and research building at Hendon Campus.This will opening in September 2008 to coincide with the relocation of Middlesex University's Health and Social Sciences Programme to Hendon Campus.This building will be comprised of two large lecture theatres and specialist laboratories for Psychology, Biomedical Science and Computing Science.";
         var mdxShepardLibraryDesc = "The Sheppard Library, based at our Hendon Campus, is Middlesex University's state of the art Learning Resource Centre offering Middlesex students full access to books, electronic journals, language help, photocopying and print services as well as being the home of our extensive web resources and audio visual services.";
-        var mdxhouseDesc = "The new Student Centre at Hendon campus will provide all the aspects of university life that aren’t about lectures, tutorials, deadlines and exams. So entertainment and refreshments, including a Student bar, will be available, as well as fitness facilities for all students, whatever they are studying. There will also be a nursery for the children of Middlesex’s many mature students. The Student Centre will open in September 2008 to coincide with the relocation to Hendon of the Middlesex University Health and Social Sciences programmes.";
+        var mdxhouseDesc = "MDX House is our dedicated student entertainment and social space which houses a student bar and eating outlets. It also serves as a performance venue and an area for you to relax with your friends and play some pool. It is also home to our Fitness Pod, the University's flagship fitness facility, as well as Student Union.  ";
         var mdxGroveDesc = " Teaching is now carried out in the Grove at Hendon, an £80m centre for creative courses, though Middlesex art and design began life as Hornsey College of Art, founded in 1880 – a British art institution, renowned for its experimental and progressive approach to art and design education.";
-
+        var ravensfields = "Ravensfield House is home to the Theatre Arts degrees at Middlesex. It houses a fully operational theatre which hosts regular performances, as well as a series of workshops, rehearsal spaces, dressing rooms and a costume store.";
+        var usherHall = "Usher Hall is one of Middlesex University's own halls which is managed by our partner Viridian Housing. Staying at this bright and modern accommodation, you will have campus life on your doorstep.";
         var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
 
         function changeLocation(location, desc,zoom) {
@@ -198,8 +163,17 @@
             map.setZoom(zoom);
             document.getElementById("info").innerHTML=(desc);
 
-        }
+            addMarker(location);
 
+        }
+        function addMarker(location) {
+            var mdxMarker = new google.maps.Marker({
+                position: location,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: mdxPin
+            });
+        }
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: mdxHouse,
@@ -207,12 +181,18 @@
                 disableDefaultUI: true
             });
 
-            var mdxMarker = new google.maps.Marker({
-                position: mdxCenter,
-                map: map,
-                animation: google.maps.Animation.DROP,
-                icon: mdxPin
-            });
+        }
+        //todo check why this doesn't work
+        function mapLoop(){
+
+                setTimeout(changeLocation(mdxHouse,mdxhouseDesc,20),200000);
+                setTimeout(changeLocation(mdxSheppardLibrary,mdxShepardLibraryDesc,19),200000);
+                setTimeout(changeLocation(mdxWilliams, mdxWilliamsDesc,19),200000);
+                setTimeout(changeLocation(mdxHatchcroft,mdxHatchcroftDesc,19),200000);
+                setTimeout(changeLocation(mdxGrove,mdxGroveDesc,20),200000);
+                setTimeout(changeLocation(mdxCollege,mdxCollegeDesc,19),200000);
+                setTimeout(changeLocation(mdxRavensfield,ravensfields,19),200000);
+
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Byec93S-QdsWmaxWQI_m757RbSEmv-M&callback=initMap" async defer></script>

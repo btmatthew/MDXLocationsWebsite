@@ -63,6 +63,53 @@
 </body>
 <script src="buildings.js"></script>
 <script>
+    $(document).ready(function () {
+        var currentSecs = new Date().getUTCSeconds();
+        var waitFor = 60 - currentSecs;
+        console.log("Wait for: " + waitFor);
+
+
+        delayedAlert(waitFor);
+
+
+
+        //
+        //        // stop loop after starting it once
+        //        var stopLoop = false;
+        //
+        //        setTimeout(function () {
+        //            while (waitFor != 0 && stopLoop === false) {
+        //                seconds = new Date().getUTCSeconds();
+        //                waitFor = waitFor - seconds;
+        //                console.log("Seconds now: " + seconds);
+        //                if (seconds === 0) {
+        //                    break;
+        //                    stopLoop = true;
+        //                }
+        //            }
+        //            alert("Seconds should be 0 now: " + new Date().getUTCSeconds());
+        //        }, waitFor * 1000);
+    });
+
+    var timeoutID;
+
+    function delayedAlert(waitFor) {
+        timeoutID = window.setTimeout(slowAlert, waitFor);
+    }
+
+    function slowAlert() {
+        alert("That was really slow!");
+        clearAlert();
+    }
+
+    function clearAlert() {
+        window.clearTimeout(timeoutID);
+    }
+
+
+
+
+
     $(".buildingItem").click(function () {
         $(".buildingItem").children().removeClass("selected");
         $(this).children().toggleClass("selected");

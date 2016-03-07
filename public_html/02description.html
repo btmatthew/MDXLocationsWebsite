@@ -68,27 +68,7 @@
         var waitFor = 60 - currentSecs;
         console.log("Wait for: " + waitFor);
 
-
         delayedAlert(waitFor);
-
-
-
-        //
-        //        // stop loop after starting it once
-        //        var stopLoop = false;
-        //
-        //        setTimeout(function () {
-        //            while (waitFor != 0 && stopLoop === false) {
-        //                seconds = new Date().getUTCSeconds();
-        //                waitFor = waitFor - seconds;
-        //                console.log("Seconds now: " + seconds);
-        //                if (seconds === 0) {
-        //                    break;
-        //                    stopLoop = true;
-        //                }
-        //            }
-        //            alert("Seconds should be 0 now: " + new Date().getUTCSeconds());
-        //        }, waitFor * 1000);
     });
 
     var timeoutID;
@@ -105,9 +85,6 @@
     function clearAlert() {
         window.clearTimeout(timeoutID);
     }
-
-
-
 
 
     $(".buildingItem").click(function () {

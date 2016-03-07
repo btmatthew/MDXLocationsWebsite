@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MDX Tour</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <!-- START top screen-->
+    <div id="mdxLogo"><img src="https://www.mdx.ac.uk/__data/assets/image/0019/9118/london-logo.png" /></div>
+    <div id="buildingName">Middlesex University</div>
+    <!-- END top screen-->
+
+    <!-- START bottom left screens-->
+    <div id="buildingList">
+        <div class="buildingItem" onclick="changeLocation(collegeBuilding)">
+            <p>College Building</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(hatchcroft)">
+            <p>Hatchcroft</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(building9)">
+            <p>Building 9</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(hendonTownHall)">
+            <p>Hendon Town Hall</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(theGrove)">
+            <p>The Grove</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(mdxHouse)">
+            <p>MDX House</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(theSheppardLibrary)">
+            <p>The Sheppard Library</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(williamsBuilding)">
+            <p>Williams Building</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(modelFarmhouse)">
+            <p>Model Farmhouse</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(ravensfield)">
+            <p>Ravensfield</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(usherHall)">
+            <p>Usher Hall</p>
+        </div>
+        <div class="buildingItem" onclick="changeLocation(sportsField)">
+            <p>Sports Field</p>
+        </div>
+    </div>
+
+    <div id="buildingDetails">
+        <div id="buildingDescription">
+            <p>Hendon Campus is Middlesex University’s most popular campus and home to the Middlesex University Business School and the School of Computing Science. Significant investment has taken place at the campus since 2002; investment continues to deliver an outstanding centre of teaching and research.</p>
+        </div>
+        <div id="buildingImageDiv">
+            <img id="buildingImage" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Middlesex_University_Hendon_Campus.jpg">
+        </div>
+    </div>
+    <!-- END bottom left screens-->
+
+    <!-- START bottom right screens-->
+    <div id="map"></div>
+    <script>
+        var map;
+        var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: collegeBuilding.location,
+                zoom: 18,
+                disableDefaultUI: true
+            });
+
+            var mdxMarker = new google.maps.Marker({
+                position: collegeBuilding.location,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: mdxPin
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Byec93S-QdsWmaxWQI_m757RbSEmv-M&callback=initMap" async defer></script>
+    <!-- END bottom right screens-->
+</body>
+<script src="buildings.js"></script>
+
+</html>

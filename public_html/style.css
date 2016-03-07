@@ -47,6 +47,9 @@ body {
     width: 66.66%;
     height: 100%;
     float: right;
+    background-color: red;
+    overflow-y: scroll;
+    overflow: hidden;
 }
 
 #buildingDescription {
@@ -54,7 +57,6 @@ body {
     height: 50%;
     background-color: #f7f8f9;
     position: relative;
-    border-bottom: 1px solid #efefef;
     color: rgba(0, 0, 0, 0.87);
     font-size: 1em;
     font-weight: normal;
@@ -63,7 +65,10 @@ body {
 
 #buildingDescription p {
     background-color: #f7f8f9;
-    padding: 14px 50px 14px 80px;
+    padding: 14px 40px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
 }
 
 #buildingImageDiv {
@@ -91,7 +96,6 @@ body {
 
 .buildingItem p {
     font-size: 1em;
-    /*    display: inline-block;*/
     max-width: calc(100% - 26px);
     white-space: nowrap;
     vertical-align: middle;

@@ -134,7 +134,7 @@ var sportsField = {
 /* END building objects */
 
 function changeLocation(buildingObject) {
-    document.getElementById("buildingDescription").innerHTML = (buildingObject.description);
+    document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
     document.getElementById('buildingImage').src = buildingObject.image;
 
     //    document.getElementById("buildingName").innerHTML = buildingObject.name;

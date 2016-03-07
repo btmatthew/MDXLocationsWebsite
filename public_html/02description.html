@@ -9,10 +9,6 @@
 </head>
 
 <body>
-    <!-- START top screen-->
-    <div id="mdxLogo"><img src="https://www.mdx.ac.uk/__data/assets/image/0019/9118/london-logo.png" /></div>
-    <div id="buildingName">Middlesex University</div>
-    <!-- END top screen-->
 
     <!-- START bottom left screens-->
     <div id="buildingList">
@@ -63,30 +59,6 @@
         </div>
     </div>
     <!-- END bottom left screens-->
-
-    <!-- START bottom right screens-->
-    <div id="map"></div>
-    <script>
-        var map;
-        var mdxPin = 'https://github.com/btmatthew/MDXLocationsWebsite/blob/master/public_html/img/mdx-pin-s.png?raw=true';
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: collegeBuilding.location,
-                zoom: 18,
-                disableDefaultUI: true
-            });
-
-            var mdxMarker = new google.maps.Marker({
-                position: collegeBuilding.location,
-                map: map,
-                animation: google.maps.Animation.DROP,
-                icon: mdxPin
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Byec93S-QdsWmaxWQI_m757RbSEmv-M&callback=initMap" async defer></script>
-    <!-- END bottom right screens-->
 </body>
 <script src="buildings.js"></script>
 

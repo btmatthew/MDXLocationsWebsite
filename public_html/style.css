@@ -91,7 +91,7 @@ body {
 
 .buildingItem p {
     font-size: 1em;
-    display: inline-block;
+    /*    display: inline-block;*/
     max-width: calc(100% - 26px);
     white-space: nowrap;
     vertical-align: middle;
@@ -119,4 +119,10 @@ body {
     height: 66.666%;
     background-color: bisque;
     float: right;
+}
+
+.selected {
+    background-color: bisque;
+    padding: 10px;
+    margin: 0;
 }

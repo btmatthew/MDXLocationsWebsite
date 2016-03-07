@@ -134,9 +134,10 @@ var sportsField = {
 /* END building objects */
 
 function changeLocation(buildingObject) {
-    document.getElementById("buildingName").innerHTML = buildingObject.name;
     document.getElementById("buildingDescription").innerHTML = (buildingObject.description);
     document.getElementById('buildingImage').src = buildingObject.image;
-    map.setCenter(buildingObject.location);
-    map.setZoom(buildingObject.zoom);
+
+    //    document.getElementById("buildingName").innerHTML = buildingObject.name;
+    //    map.setCenter(buildingObject.location);
+    //    map.setZoom(buildingObject.zoom);
 };

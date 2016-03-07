@@ -63,29 +63,26 @@
 </body>
 <script src="buildings.js"></script>
 <script>
-    $(document).ready(function () {
-        var currentSecs = new Date().getUTCSeconds();
-        var waitFor = 60 - currentSecs;
-        console.log("Wait for: " + waitFor);
+    var currentSecs = new Date().getUTCSeconds();
+    var waitFor = 60 - currentSecs;
+    console.log("Wait for: " + waitFor);
 
-        delayedAlert(waitFor);
-    });
+    delayStart(waitFor);
 
     var timeoutID;
 
-    function delayedAlert(waitFor) {
-        timeoutID = window.setTimeout(slowAlert, waitFor);
+    function delayStart(waitFor) {
+        timeoutID = window.setTimeout(startingLoop, waitFor * 1000);
     }
 
-    function slowAlert() {
-        alert("That was really slow!");
-        clearAlert();
+    function startingLoop() {
+        console.log("STARTING LOOP");
+        stopCountdown();
     }
 
-    function clearAlert() {
+    function stopCountdown() {
         window.clearTimeout(timeoutID);
     }
-
 
     $(".buildingItem").click(function () {
         $(".buildingItem").children().removeClass("selected");

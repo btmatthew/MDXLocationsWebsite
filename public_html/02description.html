@@ -77,16 +77,18 @@
 
     function startingLoop() {
         console.log("STARTING LOOP");
-        stopCountdown();
-    }
 
-    function stopCountdown() {
-        window.clearTimeout(timeoutID);
+        $('.buildingItem').each(function (k, v) {
+            var el = this;
+            setTimeout(function () {
+                $(el).click();
+            }, k * 2000);
+        });
     }
 
     $(".buildingItem").click(function () {
-        $(".buildingItem").children().removeClass("selected");
-        $(this).children().toggleClass("selected");
+        $(".buildingItem").children().removeClass("selected"); // remove highlights from all others
+        $(this).children().toggleClass("selected"); // highlights selected one
     });
 </script>
 

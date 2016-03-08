@@ -14,7 +14,7 @@
     <!-- START bottom left screens-->
     <div id="buildingList">
         <div class="buildingItem" onclick="changeLocation(collegeBuilding)">
-            <p>College Building</p>
+            <p class="selected">College Building</p>
         </div>
         <div class="buildingItem" onclick="changeLocation(hatchcroft)">
             <p>Hatchcroft</p>
@@ -76,14 +76,20 @@
     }
 
     function startingLoop() {
-        console.log("STARTING LOOP");
+        console.log("START LOOPING");
 
-        $('.buildingItem').each(function (k, v) {
-            var el = this;
-            setTimeout(function () {
-                $(el).click();
-            }, k * 2000);
-        });
+        var numbBuildings = $('.buildingItem').length;
+
+        setInterval(function () {
+
+            $('.buildingItem').each(function (k, v) {
+                var el = this;
+                setTimeout(function () {
+                    $(el).click();
+                }, k * 2000);
+            });
+
+        }, numbBuildings * 2001);
     }
 
     $(".buildingItem").click(function () {

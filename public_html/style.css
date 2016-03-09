@@ -7,6 +7,26 @@ body {
     font-size: 100%;
 }
 
+.iframeHeader {
+    width: 100%;
+    height: 33.333%;
+    background-color: aliceblue;
+}
+
+.iframeDescription {
+    width: 50%;
+    height: 66.666%;
+    float: left;
+    background-color: aqua;
+}
+
+.iframeMap {
+    width: 50%;
+    height: 66.666%;
+    background-color: bisque;
+    float: right;
+}
+
 
 /* START - 01header.html */
 
@@ -56,49 +76,10 @@ body {
     overflow: hidden;
 }
 
-#buildingDetails {
-    width: 66.66%;
-    height: 100%;
-    float: right;
-    background-color: red;
-    overflow-y: scroll;
-    overflow: hidden;
-}
-
-#buildingDescription {
-    width: 100%;
-    height: 50%;
-    background-color: #f7f8f9;
-    position: relative;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 1em;
-    font-weight: normal;
-    line-height: 20px;
-}
-
-#buildingDescription p {
-    background-color: #f7f8f9;
-    padding: 14px 40px;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-}
-
-#buildingImageDiv {
-    width: 100%;
-    height: 50%;
-    background-color: greenyellow;
-}
-
-#buildingImageDiv img {
-    width: 100%;
-    height: 100%;
-}
-
-#map {
-    height: 100%;
-    width: 100%;
-    background-color: blanchedalmond;
+.selected {
+    background-color: bisque;
+    padding: 10px;
+    margin: 0;
 }
 
 .buildingItem {
@@ -118,28 +99,54 @@ body {
     cursor: pointer;
 }
 
-.iframeHeader {
-    width: 100%;
-    height: 33.333%;
-    background-color: aliceblue;
-}
-
-.iframeDescription {
-    width: 50%;
-    height: 66.666%;
-    float: left;
-    background-color: aqua;
-}
-
-.iframeMap {
-    width: 50%;
-    height: 66.666%;
-    background-color: bisque;
+#buildingDetails {
+    width: 66.66%;
+    height: 100%;
     float: right;
+    background-color: red;
+    overflow-y: scroll;
+    overflow: hidden;
 }
 
-.selected {
-    background-color: bisque;
-    padding: 10px;
-    margin: 0;
+#buildingDescription {
+    width: 100%;
+    height: 50%;
+    background-color: #f7f8f9;
 }
+
+#buildingDescription p {
+    margin: 0;
+    padding: 14px 40px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 2.8vh;
+    line-height: 140%;
+}
+
+#buildingImageDiv {
+    width: 100%;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+#buildingImageDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* END - 02description.html */
+
+
+/* START - 03map.html */
+
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+
+/* START - 03map.html */

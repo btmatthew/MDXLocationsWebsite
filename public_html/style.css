@@ -1,6 +1,38 @@
+@font-face {
+    font-family: 'dax-regular';
+    src: url('./font/dax-regular.eot?v=0.1.6');
+    src: url('./font/dax-regular.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-regular.woff?v=0.1.6') format('woff'), url('http://www.mdx.ac.uk/__data/assets/file/0018/7830/dax-regular.ttf?v=0.1.6') format('truetype'), url('./font/dax-regular.svg?v=0.1.6#daxregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-bold';
+    src: url('./font/dax-bold.eot?v=0.1.6');
+    src: url('./font/dax-bold.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://www.mdx.ac.uk/__data/assets/file/0024/7818/dax-bold.woff?v=0.1.6') format('woff'), url('./font/dax-bold.ttf?v=0.1.6') format('truetype'), url('./font/dax-bold.svg?v=0.1.6#daxbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-light';
+    src: url('./font/dax-light.eot?v=0.1.6');
+    src: url('./font/dax-light.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-light.woff?v=0.1.6') format('woff'), url('./font/dax-light.ttf?v=0.1.6') format('truetype'), url('./font/dax-light.svg?v=0.1.6#dax_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-medium';
+    src: url('./font/dax-medium.eot?v=0.1.6');
+    src: url('./font/dax-medium.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-medium.woff?v=0.1.6') format('woff'), url('/font6/dax-medium.ttf?v=0.1.6') format('truetype'), url('./font/dax-medium.svg?v=0.1.6#dax_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'dax-medium', arial, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -10,32 +42,41 @@ body {
 .iframeHeader {
     width: 100%;
     height: 33.333%;
-    background-color: aliceblue;
 }
 
 .iframeDescription {
     width: 50%;
     height: 66.666%;
     float: left;
-    background-color: aqua;
 }
 
 .iframeMap {
     width: 50%;
     height: 66.666%;
-    background-color: bisque;
     float: right;
 }
 
 
 /* START - 01header.html */
 
+#headerDiv {
+    height: 100%;
+    background-color: #000;
+    filter: progid: DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#000, endColorstr=#282828);
+    background-image: -moz-linear-gradient(left bottom, #000 75%, #282828 100%);
+    background-image: -webkit-linear-gradient(left bottom, #000 75%, #282828 100%);
+    background-image: -ms-linear-gradient(left bottom, #000 75%, #282828 100%);
+    background-image: linear-gradient(left bottom, #000 75%, #282828 100%);
+    background-image: -o-linear-gradient(left bottom, #000 75%, #282828 100%);
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(75%, #000), color-stop(100%, #282828));
+}
+
 #mdxLogo {
+    display: block;
     width: 16.5%;
     height: 100%;
     padding: 0;
     float: left;
-    background-color: black;
     display: inline-block;
     vertical-align: middle;
 }
@@ -47,15 +88,17 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #buildingName {
+    color: white;
     float: left;
     width: 82.5%;
     padding: 0;
     margin: 0;
-    background-color: blue;
-    color: white;
     white-space: nowrap;
     font-size: 60vh;
     line-height: 100vh;
@@ -71,13 +114,11 @@ body {
     width: 33.33%;
     height: 100%;
     float: left;
-    background-color: yellow;
     overflow-y: scroll;
     overflow: hidden;
 }
 
 .selected {
-    background-color: bisque;
     padding: 10px;
     margin: 0;
 }
@@ -103,7 +144,6 @@ body {
     width: 66.66%;
     height: 100%;
     float: right;
-    background-color: red;
     overflow-y: scroll;
     overflow: hidden;
 }
@@ -111,7 +151,6 @@ body {
 #buildingDescription {
     width: 100%;
     height: 50%;
-    background-color: #f7f8f9;
 }
 
 #buildingDescription p {
@@ -128,7 +167,6 @@ body {
 #buildingImageDiv {
     width: 100%;
     height: 50%;
-    background-color: greenyellow;
 }
 
 #buildingImageDiv img {
@@ -145,7 +183,6 @@ body {
 #map {
     height: 100%;
     width: 100%;
-    background-color: blanchedalmond;
 }
 
 

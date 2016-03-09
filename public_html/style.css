@@ -1,31 +1,27 @@
 @font-face {
     font-family: 'dax-regular';
-    src: url('./font/dax-regular.eot?v=0.1.6');
-    src: url('./font/dax-regular.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-regular.woff?v=0.1.6') format('woff'), url('http://www.mdx.ac.uk/__data/assets/file/0018/7830/dax-regular.ttf?v=0.1.6') format('truetype'), url('./font/dax-regular.svg?v=0.1.6#daxregular') format('svg');
+    src: url('./font/dax-regular.eot');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dax-bold';
-    src: url('./font/dax-bold.eot?v=0.1.6');
-    src: url('./font/dax-bold.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://www.mdx.ac.uk/__data/assets/file/0024/7818/dax-bold.woff?v=0.1.6') format('woff'), url('./font/dax-bold.ttf?v=0.1.6') format('truetype'), url('./font/dax-bold.svg?v=0.1.6#daxbold') format('svg');
+    src: url('./font/dax-bold.eot');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dax-light';
-    src: url('./font/dax-light.eot?v=0.1.6');
-    src: url('./font/dax-light.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-light.woff?v=0.1.6') format('woff'), url('./font/dax-light.ttf?v=0.1.6') format('truetype'), url('./font/dax-light.svg?v=0.1.6#dax_lightregular') format('svg');
+    src: url('./font/dax-light.eot');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dax-medium';
-    src: url('./font/dax-medium.eot?v=0.1.6');
-    src: url('./font/dax-medium.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-medium.woff?v=0.1.6') format('woff'), url('/font6/dax-medium.ttf?v=0.1.6') format('truetype'), url('./font/dax-medium.svg?v=0.1.6#dax_mediumregular') format('svg');
+    src: url('./font/dax-medium.eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -100,7 +96,7 @@ body {
     padding: 0;
     margin: 0;
     white-space: nowrap;
-    font-size: 60vh;
+    font-size: 50vh;
     line-height: 100vh;
 }
 

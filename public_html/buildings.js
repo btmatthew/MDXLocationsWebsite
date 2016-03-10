@@ -69,7 +69,7 @@ var theSheppardLibrary = {
 var williamsBuilding = {
     name: "Williams Building",
     description: "The Williams Building is our hub for students studying Business and Law at Middlesex, and home to Library@Williams, a dedicated research and study space.",
-    image: imgPath + "williamsBuilding.jpg",
+    image: imgPath + "williamsBuilding.png",
     location: {
         lat: 51.590466,
         lng: -0.22848263

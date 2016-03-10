@@ -185,12 +185,13 @@ body {
 
 #buildingDescription p {
     margin: 0;
-    padding: 14px 40px;
+    padding: 2vh 1vh 0 2vh;
+/*
     -webkit-column-count: 2;
     -moz-column-count: 2;
-    column-count: 2;
+    column-count: 2;*/
     font-size: 6vh;
-    line-height: 140%;
+    line-height: 130%;
 }
 
 #buildingImageDiv {

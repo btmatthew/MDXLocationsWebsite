@@ -24,17 +24,6 @@ var hatchcroft = {
     zoom: 19
 };
 
-var building9 = {
-    name: "Building 9",
-    description: "Building 9 houses our Education department. The recently refurbished building includes a number of flexible areas for teaching, including a designated early childhood play area and a modern ICT suite.",
-    image: imgPath + "",
-    location: {
-        lat: 51.58983943,
-        lng: -0.22894397
-    },
-    zoom: 19
-};
-
 var hendonTownHall = {
     name: "Hendon Town Hall",
     description: "The Hendon Town Hall, which was built in 1901, features original council chambers which provide the perfect venue to hold moots (mock court), as well as law lectures and debates.",
@@ -94,17 +83,6 @@ var modelFarmhouse = {
     name: "Model Farmhouse",
     description: "The Model Farmhouse is home to our research and business centre. It also plays host to various events and conferences in its designated meeting and seminar rooms.",
     image: imgPath + "modelFarmhouse.jpg",
-    location: {
-        lat: 51.58983943,
-        lng: -0.22894397
-    },
-    zoom: 19
-};
-
-var ravensfield = {
-    name: "Ravensfield",
-    description: "Ravensfield House is home to the Theatre Arts degrees at Middlesex. It houses a fully operational theatre which hosts regular performances, as well as a series of workshops, rehearsal spaces, dressing rooms and a costume store.",
-    image: imgPath + "",
     location: {
         lat: 51.58983943,
         lng: -0.22894397

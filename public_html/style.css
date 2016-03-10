@@ -189,8 +189,8 @@ body {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    font-size: 5vh;
-    /*    line-height: 140%;*/
+    font-size: 6vh;
+    line-height: 140%;
 }
 
 #buildingImageDiv {

@@ -87,14 +87,4 @@ var usherHall = {
     },
     zoom: 19
 };
-
 /* END building objects */
-
-function changeLocation(buildingObject) {
-    document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
-    document.getElementById('buildingImage').src = buildingObject.image;
-
-    //    document.getElementById("buildingName").innerHTML = buildingObject.name;
-    //    map.setCenter(buildingObject.location);
-    //    map.setZoom(buildingObject.zoom);
-};

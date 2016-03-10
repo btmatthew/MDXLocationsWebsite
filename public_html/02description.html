@@ -53,7 +53,7 @@
 <script>
     var currentSecs = new Date().getUTCSeconds();
     var waitFor = 60 - currentSecs;
-    var loopingTime = 25000;
+    var loopingTime = 2000;
     console.log("Wait for: " + waitFor);
 
     delayStart(waitFor);
@@ -85,6 +85,15 @@
         $(".buildingItem").children().removeClass("selected"); // remove highlights from all others
         $(this).children().toggleClass("selected"); // highlights selected one
     });
+
+    function changeLocation(buildingObject) {
+        document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
+        document.getElementById('buildingImage').src = buildingObject.image;
+
+        //    document.getElementById("buildingName").innerHTML = buildingObject.name;
+        //    map.setCenter(buildingObject.location);
+        //    map.setZoom(buildingObject.zoom);
+    };
 </script>
 
 </html>

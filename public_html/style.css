@@ -124,10 +124,11 @@ body {
 }
 
 #buildingName {
+    font-family: 'dax-bold', arial, sans-serif;
     float: left;
     width: 82.5%;
     padding: 0;
-    margin: 0;
+    padding: 0 5vw;
     white-space: nowrap;
     font-size: 50vh;
     line-height: 100vh;
@@ -138,6 +139,9 @@ body {
 
 
 /* START - 02description.html */
+
+
+/*     START - Building List */
 
 #buildingList {
     width: 33.33%;
@@ -150,19 +154,31 @@ body {
 }
 
 .buildingItem {
-    padding-left: 80px;
+    padding-left: 180px;
 }
 
 .buildingItem p {
-    font-size: 6vh;
+    margin: 100px 0 !important;
+    font-size: 7vh;
     white-space: nowrap;
     vertical-align: middle;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: normal;
     cursor: pointer;
-    margin: 0 important;
 }
+
+.selected {
+    background-color: black;
+    padding: 30px 0 30px 120px;
+    margin: 0;
+}
+
+
+/*     END - Building List */
+
+
+/*     START - Building Description */
 
 #buildingDetails {
     width: 66.66%;
@@ -180,19 +196,21 @@ body {
 }
 
 #buildingDescription p {
+    font-family: 'dax-light', arial, sans-serif;
     margin: 0;
-    padding: 2vh 2vw;
+    padding: 2vh 1vw 0 1vw;
     font-size: 6vh;
-    line-height: 130%;
+    line-height: 120%;
+    /* split in columns */
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    -webkit-column-gap: 40px;
-    -moz-column-gap: 40px;
-    column-gap: 40px;
-    -webkit-column-rule: 4px dotted black;
-    -moz-column-rule: 4px dotted black;
-    column-rule: 4px dotted black;
+    -webkit-column-gap: 340px;
+    -moz-column-gap: 340px;
+    column-gap: 340px;
+    -webkit-column-rule: 40px dotted black;
+    -moz-column-rule: 40px dotted black;
+    column-rule: 40px dotted black;
 }
 
 #buildingImageDiv {
@@ -204,6 +222,9 @@ body {
     width: 100%;
     height: 100%;
 }
+
+
+/*     END - Building Description */
 
 
 /* END - 02description.html */
@@ -218,9 +239,3 @@ body {
 
 
 /* START - 03map.html */
-
-.selected {
-    background-color: black;
-    padding: 30px 0 30px 120px;
-    margin: 0;
-}

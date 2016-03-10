@@ -161,6 +161,7 @@ body {
     text-overflow: ellipsis;
     font-weight: normal;
     cursor: pointer;
+    margin: 0 important;
 }
 
 #buildingDetails {

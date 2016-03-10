@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: 'dax-regular';
     src: url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.eot?v=0.1.6');
@@ -29,9 +30,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
-/*
+*/
 @font-face {
     font-family: 'dax-regular';
     src: url('./font/dax-regular.eot?v=0.1.6');
@@ -63,8 +62,6 @@
     font-weight: normal;
     font-style: normal;
 }
-*/
-
 html,
 body {
     font-family: 'dax-regular', arial, sans-serif;

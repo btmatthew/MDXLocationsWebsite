@@ -77,16 +77,16 @@ var williamsBuilding = {
     zoom: 19
 };
 
-var modelFarmhouse = {
-    name: "Model Farmhouse",
-    description: "The Model Farmhouse is home to our research and business centre. It also plays host to various events and conferences in its designated meeting and seminar rooms.",
-    image: imgPath + "modelFarmhouse.jpg",
-    location: {
-        lat: 51.58983943,
-        lng: -0.22894397
-    },
-    zoom: 19
-};
+//var modelFarmhouse = {
+//    name: "Model Farmhouse",
+//    description: "The Model Farmhouse is home to our research and business centre. It also plays host to various events and conferences in its designated meeting and seminar rooms.",
+//    image: imgPath + "modelFarmhouse.jpg",
+//    location: {
+//        lat: 51.58983943,
+//        lng: -0.22894397
+//    },
+//    zoom: 19
+//};
 
 var usherHall = {
     name: "Usher Hall",

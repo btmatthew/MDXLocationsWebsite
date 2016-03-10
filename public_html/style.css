@@ -150,16 +150,11 @@ body {
 }
 
 .buildingItem {
-    /*
-    height: 24px;
-   margin-top: 8px;   margin-bottom: 6px;
-*/
+    padding-left: 40px;
 }
 
 .buildingItem p {
-    /*    font-size: 1em;*/
     font-size: 6vh;
-    /*    max-width: calc(100% - 26px);*/
     white-space: nowrap;
     vertical-align: middle;
     overflow: hidden;
@@ -185,12 +180,10 @@ body {
 
 #buildingDescription p {
     margin: 0;
-    padding: 2vh 1vh 0 2vh;
-    /*
+    padding: 2vh 2vw;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    */
     font-size: 6vh;
     line-height: 130%;
 }
@@ -218,3 +211,8 @@ body {
 
 
 /* START - 03map.html */
+
+.selected {
+    background-color: black;
+    padding-left: 50px;
+}

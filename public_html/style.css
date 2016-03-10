@@ -1,30 +1,69 @@
 @font-face {
     font-family: 'dax-regular';
-    src: url('./font/dax-regular.eot');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.svg?v=0.1.6#daxregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dax-bold';
-    src: url('./font/dax-bold.eot');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.svg?v=0.1.6#daxbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dax-light';
-    src: url('./font/dax-light.eot');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-light.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-light.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-light.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-light.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-light.svg?v=0.1.6#dax_lightregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dax-medium';
-    src: url('./font/dax-medium.eot');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.svg?v=0.1.6#dax_mediumregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
+
+/*
+@font-face {
+    font-family: 'dax-regular';
+    src: url('./font/dax-regular.eot?v=0.1.6');
+    src: url('./font/dax-regular.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-regular.woff?v=0.1.6') format('woff'), url('./font/dax-regular.ttf?v=0.1.6') format('truetype'), url('./font/dax-regular.svg?v=0.1.6#daxregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-bold';
+    src: url('./font/dax-bold.eot?v=0.1.6');
+    src: url('./font/dax-bold.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-bold.woff?v=0.1.6') format('woff'), url('./font/dax-bold.ttf?v=0.1.6') format('truetype'), url('./font/dax-bold.svg?v=0.1.6#daxbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-light';
+    src: url('./font/dax-light.eot?v=0.1.6');
+    src: url('./font/dax-light.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-light.woff?v=0.1.6') format('woff'), url('./font/dax-light.ttf?v=0.1.6') format('truetype'), url('./font/dax-light.svg?v=0.1.6#dax_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-medium';
+    src: url('./font/dax-medium.eot?v=0.1.6');
+    src: url('./font/dax-medium.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-medium.woff?v=0.1.6') format('woff'), url('./font/dax-medium.ttf?v=0.1.6') format('truetype'), url('./font/dax-medium.svg?v=0.1.6#dax_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
 
 html,
 body {
@@ -58,13 +97,7 @@ body {
 #headerDiv {
     height: 100%;
     background-color: #000;
-    filter: progid: DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#000, endColorstr=#282828);
-    background-image: -moz-linear-gradient(left bottom, #000 75%, #282828 100%);
-    background-image: -webkit-linear-gradient(left bottom, #000 75%, #282828 100%);
-    background-image: -ms-linear-gradient(left bottom, #000 75%, #282828 100%);
-    background-image: linear-gradient(left bottom, #000 75%, #282828 100%);
-    background-image: -o-linear-gradient(left bottom, #000 75%, #282828 100%);
-    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(75%, #000), color-stop(100%, #282828));
+    color: white;
 }
 
 #mdxLogo {
@@ -90,7 +123,6 @@ body {
 }
 
 #buildingName {
-    color: white;
     float: left;
     width: 82.5%;
     padding: 0;
@@ -112,22 +144,21 @@ body {
     float: left;
     overflow-y: scroll;
     overflow: hidden;
-}
-
-.selected {
-    padding: 10px;
-    margin: 0;
+    background-color: #C4161C;
+    color: white;
 }
 
 .buildingItem {
+    /*
     height: 24px;
-    margin-top: 8px;
-    margin-bottom: 6px;
+   margin-top: 8px;   margin-bottom: 6px;
+*/
 }
 
 .buildingItem p {
-    font-size: 1em;
-    max-width: calc(100% - 26px);
+    /*    font-size: 1em;*/
+    font-size: 6vh;
+    /*    max-width: calc(100% - 26px);*/
     white-space: nowrap;
     vertical-align: middle;
     overflow: hidden;
@@ -147,6 +178,8 @@ body {
 #buildingDescription {
     width: 100%;
     height: 50%;
+    background-color: #282828;
+    color: white;
 }
 
 #buildingDescription p {
@@ -155,9 +188,8 @@ body {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 2.8vh;
-    line-height: 140%;
+    font-size: 3vh;
+    /*    line-height: 140%;*/
 }
 
 #buildingImageDiv {

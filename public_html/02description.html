@@ -40,9 +40,11 @@
         <div class="buildingItem" onclick="changeLocation(usherHall)">
             <p>Usher Hall</p>
         </div>
-        <div class="buildingItem" onclick="changeLocation(sportsField)">
-            <p>Sports Field</p>
-        </div>
+<!--
+<div class="buildingItem" onclick="changeLocation(sportsField)">
+    <p>Sports Field</p>
+</div>
+-->
     </div>
 
     <div id="buildingDetails">
@@ -80,10 +82,10 @@
                 var el = this;
                 setTimeout(function () {
                     $(el).click();
-                }, k * 2000);
+                }, k * 30000);
             });
 
-        }, numbBuildings * 2001);
+        }, numbBuildings * 30001);
     }
 
     $(".buildingItem").click(function () {

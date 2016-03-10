@@ -2,7 +2,7 @@ var imgPath = "./img/building/";
 
 var collegeBuilding = {
     name: "College Building",
-    description: "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year. The Middlesex University Campus Reception and Student Information booth are located in the quadrangle.Student Services (Student Office, Money and Welfare Advice, Counsellingand Students with Children) operate on the ground floor of The CollegeBuilding. Their opening hours are 9.30am - 3.30pm from Monday to Friday.",
+    description: "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year.",
     image: imgPath + "collegeBuilding.jpg",
     location: {
         lat: 51.58983943,
@@ -13,7 +13,7 @@ var collegeBuilding = {
 
 var hatchcroft = {
     name: "Hatchcroft",
-    description: "Building has begun on our new teaching and research building at Hendon Campus.This will opening in September 2008 to coincide with the relocation of Middlesex University's Health and Social Sciences Programme to Hendon Campus. This building will be comprised of two large lecture theatres and specialist laboratories for Psychology, Biomedical Science and Computing Science.",
+    description: "The £36 million Hatchcroft building is home to world-class science research and teaching at Middlesex. Specialist spaces for biomedical and environmental sciences, computer science, psychology and sport and human performance allow students to work in some of the best-equipped laboratories in the UK.",
     image: imgPath + "hatchcroft.jpg",
     location: {
         lat: 51.58915619,
@@ -35,7 +35,7 @@ var hendonTownHall = {
 
 var theGrove = {
     name: "The Grove",
-    description: "Our £80 million Grove is home to some of the best creative facilities in the UK. The building houses state-of-the-art TV studios, workshops for fashion, textile and jewellery design, a ceramics studio, TV and film production suites, 3D workshops and extensive photography facilities. The Grove is the place to explore traditional and new techniques across the creative disciplines.",
+    description: "Our £80 million Grove is home to some of the best creative facilities in the UK. The building houses state-of-the-art TV studios, workshops for fashion, textile and jewellery design, a ceramics studio, TV and film production suites, 3D workshops and extensive photography facilities.",
     image: imgPath + "theGrove.jpg",
     location: {
         lat: 51.58861959,
@@ -46,7 +46,7 @@ var theGrove = {
 
 var mdxHouse = {
     name: "MDX House",
-    description: "MDX House is our dedicated student entertainment and social space which houses a student bar and eating outlets. It also serves as a performance venue and an area for you to relax with your friends and play some pool. It is also home to our Fitness Pod, the University's flagship fitness facility, as well as Student Union.",
+    description: "MDX House is our dedicated student entertainment and social space which houses a student bar and eating outlets. It also serves as a performance venue and an area for you to relax with your friends and play some pool. It is also home to our Fitness Pod, the University's flagship fitness facility.",
     image: imgPath + "mdxHouse.jpg",
     location: {
         lat: 51.58983943,
@@ -57,7 +57,7 @@ var mdxHouse = {
 
 var theSheppardLibrary = {
     name: "The Sheppard Library",
-    description: "The Sheppard Library is open 24 hours a day, seven days a week during term time. Our collection encompasses more than half a million items, including 350,000 books and e-books and over 24,000 online journals. The library is home to more than 1,000 study areas and 600 computing spaces, and specialist staff are on hand to offer guidance and support to help students meet their study needs.",
+    description: "The Sheppard Library is open 24 hours a day, seven days a week during term time. Our collection encompasses more than half a million items, including 350,000 books and e-books and over 24,000 online journals. The library is home to more than 1,000 study areas and 600 computing spaces",
     image: imgPath + "theSheppardLibrary.jpg",
     location: {
         lat: 51.59039934,
@@ -99,16 +99,16 @@ var usherHall = {
     zoom: 19
 };
 
-var sportsField = {
-    name: "Sports Field",
-    description: "",
-    image: imgPath + "sportsField.jpg",
-    location: {
-        lat: 51.58983943,
-        lng: -0.22894397
-    },
-    zoom: 19
-};
+//var sportsField = {
+//    name: "Sports Field",
+//    description: "<< add description >>",
+//    image: imgPath + "sportsField.jpg",
+//    location: {
+//        lat: 51.58983943,
+//        lng: -0.22894397
+//    },
+//    zoom: 19
+//};
 /* END building objects */
 
 function changeLocation(buildingObject) {

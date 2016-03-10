@@ -186,10 +186,11 @@ body {
 #buildingDescription p {
     margin: 0;
     padding: 2vh 1vh 0 2vh;
-/*
+    /*
     -webkit-column-count: 2;
     -moz-column-count: 2;
-    column-count: 2;*/
+    column-count: 2;
+    */
     font-size: 6vh;
     line-height: 130%;
 }

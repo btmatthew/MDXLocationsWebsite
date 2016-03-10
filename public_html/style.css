@@ -182,11 +182,17 @@ body {
 #buildingDescription p {
     margin: 0;
     padding: 2vh 2vw;
+    font-size: 6vh;
+    line-height: 130%;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    font-size: 6vh;
-    line-height: 130%;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    -webkit-column-rule: 4px dotted black;
+    -moz-column-rule: 4px dotted black;
+    column-rule: 4px dotted black;
 }
 
 #buildingImageDiv {

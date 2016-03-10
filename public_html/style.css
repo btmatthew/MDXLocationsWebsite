@@ -124,11 +124,9 @@ body {
 }
 
 #buildingName {
-    font-family: 'dax-bold', arial, sans-serif;
     float: left;
     width: 82.5%;
     padding: 0;
-    padding: 0 5vw;
     white-space: nowrap;
     font-size: 50vh;
     line-height: 100vh;

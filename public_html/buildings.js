@@ -1,5 +1,3 @@
-/* START building objects */
-
 var imgPath = "./img/building/";
 
 var collegeBuilding = {
@@ -15,7 +13,7 @@ var collegeBuilding = {
 
 var hatchcroft = {
     name: "Hatchcroft",
-    description: "The £36 million Hatchcroft building is home to world-class science research and teaching at Middlesex. Specialist spaces for biomedical and environmental sciences, computer science, psychology and sport and human performance allow students to work in some of the best-equipped laboratories in the UK. Hatchcroft also houses modern lecture theatres and advanced computer laboratories.",
+    description: "Building has begun on our new teaching and research building at Hendon Campus.This will opening in September 2008 to coincide with the relocation of Middlesex University's Health and Social Sciences Programme to Hendon Campus. This building will be comprised of two large lecture theatres and specialist laboratories for Psychology, Biomedical Science and Computing Science.",
     image: imgPath + "hatchcroft.jpg",
     location: {
         lat: 51.58915619,
@@ -48,7 +46,7 @@ var theGrove = {
 
 var mdxHouse = {
     name: "MDX House",
-    description: "MDX House is the social centre of our campus, where students can socialise over a drink or a meal in our newly-refurbished bar and dining areas, enjoy live music and performance or a game of pool. The MDX House precinct is also home to the Fitness Pod, our campus gym, and a variety of sporting facilities – including a Real Tennis Court, AstroTurf pitches, multi-use courts and a bouldering wall.",
+    description: "MDX House is our dedicated student entertainment and social space which houses a student bar and eating outlets. It also serves as a performance venue and an area for you to relax with your friends and play some pool. It is also home to our Fitness Pod, the University's flagship fitness facility, as well as Student Union.",
     image: imgPath + "mdxHouse.jpg",
     location: {
         lat: 51.58983943,
@@ -71,7 +69,7 @@ var theSheppardLibrary = {
 var williamsBuilding = {
     name: "Williams Building",
     description: "The Williams Building is our hub for students studying Business and Law at Middlesex, and home to Library@Williams, a dedicated research and study space.",
-    image: imgPath + "",
+    image: imgPath + "williamsBuilding.jpg",
     location: {
         lat: 51.590466,
         lng: -0.22848263
@@ -92,7 +90,7 @@ var modelFarmhouse = {
 
 var usherHall = {
     name: "Usher Hall",
-    description: "Middlesex University's bright, modern Halls of Residence allow you to enjoy campus life on your doorstep.",
+    description: "Usher Hall is one of Middlesex University's own halls which is managed by our partner Viridian Housing. Staying at this bright and modern accommodation, you will have campus life on your doorstep.",
     image: imgPath + "usherHall.jpg",
     location: {
         lat: 51.58983943,
@@ -115,7 +113,7 @@ var sportsField = {
 
 function changeLocation(buildingObject) {
     document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
-    //    document.getElementById('buildingImage').src = buildingObject.image;
+    document.getElementById('buildingImage').src = buildingObject.image;
 
     //    document.getElementById("buildingName").innerHTML = buildingObject.name;
     //    map.setCenter(buildingObject.location);

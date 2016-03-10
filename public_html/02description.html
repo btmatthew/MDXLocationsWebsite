@@ -63,6 +63,7 @@
 <script>
     var currentSecs = new Date().getUTCSeconds();
     var waitFor = 60 - currentSecs;
+    var loopingTime = 25000;
     console.log("Wait for: " + waitFor);
 
     delayStart(waitFor);
@@ -84,10 +85,10 @@
                 var el = this;
                 setTimeout(function () {
                     $(el).click();
-                }, k * 30000);
+                }, k * loopingTime);
             });
 
-        }, numbBuildings * 30001);
+        }, numbBuildings * loopingTime + 1);
     }
 
     $(".buildingItem").click(function () {

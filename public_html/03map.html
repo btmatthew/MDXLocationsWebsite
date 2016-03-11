@@ -39,20 +39,21 @@
         window.setTimeout(startMapLoop, waitFor * 1000);
 
         function startMapLoop() {
+            console.log("START startMapLoop")
 
             var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
             for (var i = 0; i < buildingList.length; i++) {
+                console.log("Moving to building: " + buildingList[i].name);
                 (function (latLng, zoom) {
                     setTimeout(function () {
                         map.setCenter(latLng);
                         map.setZoom(zoom)
-                        console.log("Map changed");
+                        console.log("Map changed!");
                     }, loopingTime);
                 })(buildingList[i].location, buildingList[i].zoom);
                 loopingTime += loopingTime;
             }
-
             setTimeout(startMapLoop, loopingTime * buildingList.length);
         }
     });

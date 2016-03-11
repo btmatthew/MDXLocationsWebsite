@@ -51,49 +51,61 @@
 </body>
 <script src="buildings.js"></script>
 <script>
-    //    var currentSecs = new Date().getUTCSeconds();
-    //    var waitFor = 60 - currentSecs;
-    //    var loopingTime = 4000;
-    //    console.log("Wait for: " + waitFor);
+    $(window).load(function () {
 
-    delayStart(waitFor);
+        window.setTimeout(startBuildingsLoop, waitFor * 1000);
 
-    var timeoutID;
+        function startBuildingsLoop() {
+            console.log("START startBuildingsLoop")
 
-    function delayStart(waitFor) {
-        timeoutID = window.setTimeout(startingLoop, waitFor * 1000);
-    }
+            var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
-    function startingLoop() {
-        console.log("START LOOPING");
+            for (var i = 0; i < buildingList.length; i++) {
+                console.log("Moving to building: " + buildingList[i].name);
+                (function (description, image) {
+                    setTimeout(function () {
+                        document.getElementById("buildingDescription").innerHTML = '<p>' + description + '</p>';
+                        document.getElementById('buildingImage').src = image;
+                        console.log("Description/image changed!");
+                    }, loopingTime);
+                })(buildingList[i].description, buildingList[i].image);
+                loopingTime += loopingTime;
+            }
+            setTimeout(startMapLoop, loopingTime * buildingList.length);
+        }
+    });
+</script>
+<script>
+    /*
+        window.setTimeout(startBuildingLoop, waitFor * 1000);
 
-        var numbBuildings = $('.buildingItem').length;
+        function startBuildingLoop() {
+            console.log("START startMapLoop")
 
-        setInterval(function () {
+            var numbBuildings = $('.buildingItem').length;
 
-            $('.buildingItem').each(function (k, v) {
-                var el = this;
-                setTimeout(function () {
-                    $(el).click();
-                }, k * loopingTime);
-            });
+            setInterval(function () {
 
-        }, numbBuildings * loopingTime + 1);
-    }
+                $('.buildingItem').each(function (k, v) {
+                    var el = this;
+                    setTimeout(function () {
+                        $(el).click();
+                    }, k * loopingTime);
+                });
 
+            }, numbBuildings * loopingTime + 1);
+        }
+    */
     $(".buildingItem").click(function () {
         $(".buildingItem").children().removeClass("selected"); // remove highlights from all others
         $(this).children().toggleClass("selected"); // highlights selected one
     });
-
-    function changeLocation(buildingObject) {
-        document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
-        document.getElementById('buildingImage').src = buildingObject.image;
-
-        //    document.getElementById("buildingName").innerHTML = buildingObject.name;
-        //    map.setCenter(buildingObject.location);
-        //    map.setZoom(buildingObject.zoom);
-    };
+    /*
+        function changeLocation(buildingObject) {
+            document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
+            document.getElementById('buildingImage').src = buildingObject.image;
+      };
+        */
 </script>
 
 </html>

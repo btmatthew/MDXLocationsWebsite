@@ -35,21 +35,27 @@
 </body>
 <script>
     $(window).load(function () {
-        var loopingTime = 1000;
 
-        var index = 0;
-        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
+        startMapLoop();
 
-        setInterval(function () {
-                setTimeout(function () {
-                    for (index = 0; index < buildingList.length; index++) {
-                        //                        alert(buildingList[index].location.lat + "" + buildingList[index].location.lng);
-                        map.setCenter(buildingList[index].location);
-                        map.setZoom(buildingList[index].zoom);
-                    }
-                }, buildingList.length * loopingTime);
+        function startMapLoop() {
+
+            var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
+            var delay = 1000;
+
+            for (var i = 0; i < buildingList.length; i++) {
+                (function (gps, zoom) {
+                    setTimeout(function () {
+                        map.setCenter(gps);
+                        map.setZoom(zoom)
+                        console.log(s);
+                    }, delay);
+                })(buildingList[i].location, buildingList[i].zoom);
+                delay += 1000;
             }
-        }, buildingList.length * loopingTime + 1);
+
+            setTimeout(startMapLoop, 10000);
+        }
     });
 </script>
 <script src="buildings.js"></script>

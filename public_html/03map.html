@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="buildings.js"></script>
 </head>
 
 <body>
@@ -44,7 +45,6 @@
             var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
             for (var i = 0; i < buildingList.length; i++) {
-                console.log("Moving to building: " + buildingList[i].name);
                 (function (latLng, zoom) {
                     setTimeout(function () {
                         map.setCenter(latLng);
@@ -53,11 +53,11 @@
                     }, loopingTime);
                 })(buildingList[i].location, buildingList[i].zoom);
                 loopingTime += loopingTime;
+                console.log("loopingTime: " + loopingTime);
             }
             setTimeout(startMapLoop, loopingTime * buildingList.length);
         }
     });
 </script>
-<script src="buildings.js"></script>
 
 </html>

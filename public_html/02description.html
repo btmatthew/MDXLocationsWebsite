@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="buildings.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,6 @@
     </div>
     <!-- END bottom left screens-->
 </body>
-
 <script>
     $(window).load(function () {
 
@@ -61,7 +61,6 @@
             var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
             for (var i = 0; i < buildingList.length; i++) {
-                console.log("Moving to building: " + buildingList[i].name);
                 (function (description, image) {
                     setTimeout(function () {
                         document.getElementById("buildingDescription").innerHTML = '<p>' + description + '</p>';
@@ -70,8 +69,9 @@
                     }, loopingTime);
                 })(buildingList[i].description, buildingList[i].image);
                 loopingTime += loopingTime;
+                console.log("loopingTime: " + loopingTime);
             }
-            setTimeout(startMapLoop, loopingTime * buildingList.length);
+            setTimeout(startBuildingsLoop, loopingTime * buildingList.length);
         }
     });
 
@@ -80,6 +80,5 @@
         $(this).children().toggleClass("selected"); // highlights selected one
     });
 </script>
-<script src="buildings.js"></script>
 
 </html>

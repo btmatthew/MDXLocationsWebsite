@@ -35,14 +35,10 @@
 </body>
 <script>
     $(window).load(function () {
-        var currentSecs = new Date().getUTCSeconds();
-        var waitFor = 60 - currentSecs;
-        var waitFor = 2;
         var loopingTime = 1000;
 
         var index = 0;
         var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
-
 
         setInterval(function () {
             for (index = 0; index < 8; index++) {
@@ -56,37 +52,6 @@
             }
         }, buildingList.length * loopingTime + 1);
     });
-
-    /*
-        var currentSecs = new Date().getUTCSeconds();
-        var waitFor = 60 - currentSecs;
-        var waitFor = 2;
-        var loopingTime = 1000;
-        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
-        console.log("Wait for: " + waitFor);
-        delayStart(waitFor);
-        var timeoutID;
-
-        function delayStart(waitFor) {
-            timeoutID = window.setTimeout(startingLoop, waitFor * 1000);
-        }
-
-        function startingLoop() {
-            console.log("START LOOPING");
-            setInterval(function () {
-                for (index = 0; index < 8; index++) {
-                    setTimeout(function () {
-                        changeMap(index);
-                        alert(buildingList[0].location.lat);
-                    }, buildingList.length * loopingTime);
-                }
-            }, 8 * loopingTime + 1);
-        }
-
-        function changeMap(index) {
-            alert("Lat: " + buildingList[index].location.lat + "Long: " + buildingList[index].location.lng);
-        }
-        */
 </script>
 <script src="buildings.js"></script>
 

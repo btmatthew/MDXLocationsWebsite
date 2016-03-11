@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -32,37 +33,61 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Byec93S-QdsWmaxWQI_m757RbSEmv-M&callback=initMap" async defer></script>
     <!-- END bottom right screens-->
 </body>
-<script src="buildings.js"></script>
 <script>
-    var currentSecs = new Date().getUTCSeconds();
-    var waitFor = 60 - currentSecs;
-    var loopingTime = 6000;
-    console.log("Wait for: " + waitFor);
+    $(window).load(function () {
+        var currentSecs = new Date().getUTCSeconds();
+        var waitFor = 60 - currentSecs;
+        var waitFor = 2;
+        var loopingTime = 1000;
 
-    delayStart(waitFor);
+        var index = 0;
+        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
-    var timeoutID;
-
-    function delayStart(waitFor) {
-        timeoutID = window.setTimeout(startingLoop, waitFor * 1000);
-    }
-
-    function startingLoop() {
-        console.log("START LOOPING");
-
-        var buildingList = ["collegeBuilding", "hatchcroft", "hendonTownHall", "theGrove", "mdxHouse", "theSheppardLibrary", "williamsBuilding", "usherHall"];
-
-        var numbBuildings = buildingList.length;
 
         setInterval(function () {
-            for (index = 0; index < buildingList.length; index++) {
+            for (index = 0; index < 8; index++) {
                 setTimeout(function () {
-                    map.setCenter(buildingList[index].location);
-                    map.setZoom(buildingList[index].zoom);
-                }, k * loopingTime);
+                    for (index = 0; index < buildingList.length; index++) {
+                        //                        alert(buildingList[index].location.lat + "" + buildingList[index].location.lng);
+                        map.setCenter(buildingList[index].location);
+                        map.setZoom(buildingList[index].zoom);
+                    }
+                }, buildingList.length * loopingTime);
             }
-        }, numbBuildings * loopingTime + 1);
-    }
+        }, buildingList.length * loopingTime + 1);
+    });
+
+    /*
+        var currentSecs = new Date().getUTCSeconds();
+        var waitFor = 60 - currentSecs;
+        var waitFor = 2;
+        var loopingTime = 1000;
+        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
+        console.log("Wait for: " + waitFor);
+        delayStart(waitFor);
+        var timeoutID;
+
+        function delayStart(waitFor) {
+            timeoutID = window.setTimeout(startingLoop, waitFor * 1000);
+        }
+
+        function startingLoop() {
+            console.log("START LOOPING");
+            setInterval(function () {
+                for (index = 0; index < 8; index++) {
+                    setTimeout(function () {
+                        changeMap(index);
+                        alert(buildingList[0].location.lat);
+                    }, buildingList.length * loopingTime);
+                }
+            }, 8 * loopingTime + 1);
+        }
+
+        function changeMap(index) {
+            alert("Lat: " + buildingList[index].location.lat + "Long: " + buildingList[index].location.lng);
+        }
+        */
 </script>
+<script src="buildings.js"></script>
 
 </html>

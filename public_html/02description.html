@@ -49,7 +49,7 @@
     </div>
     <!-- END bottom left screens-->
 </body>
-<script src="buildings.js"></script>
+
 <script>
     $(window).load(function () {
 
@@ -74,38 +74,12 @@
             setTimeout(startMapLoop, loopingTime * buildingList.length);
         }
     });
-</script>
-<script>
-    /*
-        window.setTimeout(startBuildingLoop, waitFor * 1000);
 
-        function startBuildingLoop() {
-            console.log("START startMapLoop")
-
-            var numbBuildings = $('.buildingItem').length;
-
-            setInterval(function () {
-
-                $('.buildingItem').each(function (k, v) {
-                    var el = this;
-                    setTimeout(function () {
-                        $(el).click();
-                    }, k * loopingTime);
-                });
-
-            }, numbBuildings * loopingTime + 1);
-        }
-    */
     $(".buildingItem").click(function () {
         $(".buildingItem").children().removeClass("selected"); // remove highlights from all others
         $(this).children().toggleClass("selected"); // highlights selected one
     });
-    /*
-        function changeLocation(buildingObject) {
-            document.getElementById("buildingDescription").innerHTML = '<p>' + (buildingObject.description) + '</p>';
-            document.getElementById('buildingImage').src = buildingObject.image;
-      };
-        */
 </script>
+<script src="buildings.js"></script>
 
 </html>

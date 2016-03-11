@@ -36,25 +36,24 @@
 <script>
     $(window).load(function () {
 
-        startMapLoop();
+        window.setTimeout(startMapLoop, waitFor * 1000);
 
         function startMapLoop() {
 
             var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
-            var delay = 1000;
 
             for (var i = 0; i < buildingList.length; i++) {
-                (function (gps, zoom) {
+                (function (latLng, zoom) {
                     setTimeout(function () {
-                        map.setCenter(gps);
+                        map.setCenter(latLng);
                         map.setZoom(zoom)
-                        console.log(s);
-                    }, delay);
+                        console.log("Map changed");
+                    }, loopingTime);
                 })(buildingList[i].location, buildingList[i].zoom);
-                delay += 1000;
+                loopingTime += loopingTime;
             }
 
-            setTimeout(startMapLoop, 10000);
+            setTimeout(startMapLoop, loopingTime * buildingList.length);
         }
     });
 </script>

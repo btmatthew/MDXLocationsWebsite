@@ -1,3 +1,8 @@
+var currentSecs = new Date().getUTCSeconds();
+var waitFor = 60 - currentSecs;
+var loopingTime = 3000;
+console.log("Wait for: " + waitFor);
+
 var imgPath = "./img/building/";
 
 var collegeBuilding = {

@@ -130,9 +130,8 @@ body {
     white-space: nowrap;
     font-size: 50vh;
     line-height: 100vh;
-    text-align: center;
+    /*    text-align: center;*/
     letter-spacing: 30px;
-
 }
 
 

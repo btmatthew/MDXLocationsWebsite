@@ -33,5 +33,36 @@
     <!-- END bottom right screens-->
 </body>
 <script src="buildings.js"></script>
+<script>
+    var currentSecs = new Date().getUTCSeconds();
+    var waitFor = 60 - currentSecs;
+    var loopingTime = 6000;
+    console.log("Wait for: " + waitFor);
+
+    delayStart(waitFor);
+
+    var timeoutID;
+
+    function delayStart(waitFor) {
+        timeoutID = window.setTimeout(startingLoop, waitFor * 1000);
+    }
+
+    function startingLoop() {
+        console.log("START LOOPING");
+
+        var buildingList = ["collegeBuilding", "hatchcroft", "hendonTownHall", "theGrove", "mdxHouse", "theSheppardLibrary", "williamsBuilding", "usherHall"];
+
+        var numbBuildings = buildingList.length;
+
+        setInterval(function () {
+            for (index = 0; index < buildingList.length; index++) {
+                setTimeout(function () {
+                    map.setCenter(buildingList[index].location);
+                    map.setZoom(buildingList[index].zoom);
+                }, k * loopingTime);
+            }
+        }, numbBuildings * loopingTime + 1);
+    }
+</script>
 
 </html>

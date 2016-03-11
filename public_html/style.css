@@ -1,18 +1,111 @@
+@font-face {
+    font-family: 'dax-regular';
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-regular.svg?v=0.1.6#daxregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-bold';
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-bold.svg?v=0.1.6#daxbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-light';
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-light.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-light.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-light.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-light.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-light.svg?v=0.1.6#dax_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-medium';
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.eot?v=0.1.6');
+    src: url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.woff?v=0.1.6') format('woff'), url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.ttf?v=0.1.6') format('truetype'), url('http://osferreiras.com.br/sub-projects/test/font/dax-medium.svg?v=0.1.6#dax_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+@font-face {
+    font-family: 'dax-regular';
+    src: url('./font/dax-regular.eot?v=0.1.6');
+    src: url('./font/dax-regular.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-regular.woff?v=0.1.6') format('woff'), url('./font/dax-regular.ttf?v=0.1.6') format('truetype'), url('./font/dax-regular.svg?v=0.1.6#daxregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-bold';
+    src: url('./font/dax-bold.eot?v=0.1.6');
+    src: url('./font/dax-bold.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-bold.woff?v=0.1.6') format('woff'), url('./font/dax-bold.ttf?v=0.1.6') format('truetype'), url('./font/dax-bold.svg?v=0.1.6#daxbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-light';
+    src: url('./font/dax-light.eot?v=0.1.6');
+    src: url('./font/dax-light.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-light.woff?v=0.1.6') format('woff'), url('./font/dax-light.ttf?v=0.1.6') format('truetype'), url('./font/dax-light.svg?v=0.1.6#dax_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dax-medium';
+    src: url('./font/dax-medium.eot?v=0.1.6');
+    src: url('./font/dax-medium.eot?v=0.1.6?#iefix') format('embedded-opentype'), url('./font/dax-medium.woff?v=0.1.6') format('woff'), url('./font/dax-medium.ttf?v=0.1.6') format('truetype'), url('./font/dax-medium.svg?v=0.1.6#dax_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
 html,
 body {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'dax-regular', arial, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
     font-size: 100%;
 }
 
+.iframeHeader {
+    width: 100%;
+    height: 33.333%;
+}
+
+.iframeDescription {
+    width: 50%;
+    height: 66.666%;
+    float: left;
+}
+
+.iframeMap {
+    width: 50%;
+    height: 66.666%;
+    float: right;
+}
+
+
+/* START - 01header.html */
+
+#headerDiv {
+    height: 100%;
+    background-color: #000;
+    color: white;
+}
+
 #mdxLogo {
+    display: block;
     width: 16.5%;
     height: 100%;
     padding: 0;
     float: left;
-    background-color: black;
     display: inline-block;
     vertical-align: middle;
 }
@@ -21,82 +114,53 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    width: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #buildingName {
-    height: 100%;
+    float: left;
+    width: 82.5%;
     padding: 0;
-    background-color: blue;
-    padding-left: 40px;
-    color: white;
     white-space: nowrap;
-    font-size: 3em;
-    font-weight: 400;
+    font-size: 50vh;
+    line-height: 100vh;
+    text-align: center;
+    letter-spacing: 150%;
+
 }
+
+
+/* END - 01header.html */
+
+
+/* START - 02description.html */
+
+
+/*     START - Building List */
 
 #buildingList {
     width: 33.33%;
     height: 100%;
     float: left;
-    background-color: yellow;
     overflow-y: scroll;
     overflow: hidden;
-}
-
-#buildingDetails {
-    width: 66.66%;
-    height: 100%;
-    float: right;
-    background-color: red;
-    overflow-y: scroll;
-    overflow: hidden;
-}
-
-#buildingDescription {
-    width: 100%;
-    height: 50%;
-    background-color: #f7f8f9;
-    position: relative;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 1em;
-    font-weight: normal;
-    line-height: 20px;
-}
-
-#buildingDescription p {
-    background-color: #f7f8f9;
-    padding: 14px 40px;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-}
-
-#buildingImageDiv {
-    width: 100%;
-    height: 50%;
-    background-color: greenyellow;
-}
-
-#buildingImageDiv img {
-    width: 100%;
-    height: 100%;
-}
-
-#map {
-    height: 100%;
-    width: 100%;
-    background-color: blanchedalmond;
+    background-color: #C4161C;
+    color: white;
 }
 
 .buildingItem {
-    height: 24px;
-    margin-top: 8px;
-    margin-bottom: 6px;
+    padding-left: 180px;
 }
 
 .buildingItem p {
-    font-size: 1em;
-    max-width: calc(100% - 26px);
+    margin: 100px 0 !important;
+    font-size: 7vh;
     white-space: nowrap;
     vertical-align: middle;
     overflow: hidden;
@@ -105,28 +169,74 @@ body {
     cursor: pointer;
 }
 
-.iframeHeader {
-    width: 100%;
-    height: 33.333%;
-    background-color: aliceblue;
-}
-
-.iframeDescription {
-    width: 50%;
-    height: 66.666%;
-    float: left;
-    background-color: aqua;
-}
-
-.iframeMap {
-    width: 50%;
-    height: 66.666%;
-    background-color: bisque;
-    float: right;
-}
-
 .selected {
-    background-color: bisque;
-    padding: 10px;
+    background-color: black;
+    padding: 30px 0 30px 120px;
     margin: 0;
 }
+
+
+/*     END - Building List */
+
+
+/*     START - Building Description */
+
+#buildingDetails {
+    width: 66.66%;
+    height: 100%;
+    float: right;
+    overflow-y: scroll;
+    overflow: hidden;
+}
+
+#buildingDescription {
+    width: 100%;
+    height: 50%;
+    background-color: #282828;
+    color: white;
+}
+
+#buildingDescription p {
+    font-family: 'dax-light', arial, sans-serif;
+    margin: 0;
+    padding: 2vh 1vw 0 1vw;
+    font-size: 6vh;
+    line-height: 120%;
+    /* split in columns */
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 340px;
+    -moz-column-gap: 340px;
+    column-gap: 340px;
+    -webkit-column-rule: 40px dotted black;
+    -moz-column-rule: 40px dotted black;
+    column-rule: 40px dotted black;
+}
+
+#buildingImageDiv {
+    width: 100%;
+    height: 50%;
+}
+
+#buildingImageDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*     END - Building Description */
+
+
+/* END - 02description.html */
+
+
+/* START - 03map.html */
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* START - 03map.html */

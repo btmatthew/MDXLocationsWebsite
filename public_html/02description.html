@@ -52,27 +52,56 @@
 </body>
 <script>
     $(window).load(function () {
+        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
-        window.setTimeout(startBuildingsLoop, waitFor * 1000);
+        window.setTimeout(startLoopingLoopDescriptions, waitFor * 1000); // wait to be synced so it can start looping
+        // startLoopingLoopDescriptions(); // FOR TESTING PURPOSE. Don't need to wait for the seconds to be 00
 
-        function startBuildingsLoop() {
-            console.log("START startBuildingsLoop")
+        function startLoopingLoopDescriptions() { // big loop for the for-loop
+            console.log("(RE)STARTING big loop for descriptions");
+            setInterval(starDescriptionsLoop, loopingTime * buildingList.length + 1);
+        }
 
-            var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
+        function starDescriptionsLoop() {
+            var internalLoopTime = loopingTime;
+            console.log("(RE) STARTING looping descriptions buildings");
 
-            for (var i = 0; i < buildingList.length; i++) {
-                (function (description, image) {
-                    setTimeout(function () {
+            for (var i = 0; i < buildingList.length; i++) { // go through all buildings
+                (function (description, image) { // pass the description and image url
+                    setTimeout(function () { // wait few seconds before going to the next building
                         document.getElementById("buildingDescription").innerHTML = '<p>' + description + '</p>';
                         document.getElementById('buildingImage').src = image;
                         console.log("Description/image changed!");
-                    }, loopingTime);
+                    }, internalLoopTime += loopingTime); // add enough waiting time between each building
                 })(buildingList[i].description, buildingList[i].image);
-                loopingTime += loopingTime;
-                console.log("loopingTime: " + loopingTime);
+                console.log("internalLoopTime: " + internalLoopTime);
             }
-            setTimeout(startBuildingsLoop, loopingTime * buildingList.length);
         }
+
+
+        /*
+                window.setTimeout(startBuildingsLoop, waitFor * 1000);
+
+                function startBuildingsLoop() {
+                    console.log("START startBuildingsLoop")
+
+                    var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
+
+                    for (var i = 0; i < buildingList.length; i++) {
+                        (function (description, image) {
+                            setTimeout(function () {
+                                document.getElementById("buildingDescription").innerHTML = '<p>' + description + '</p>';
+                                document.getElementById('buildingImage').src = image;
+                                console.log("Description/image changed!");
+                            }, loopingTime);
+                        })(buildingList[i].description, buildingList[i].image);
+                        loopingTime += loopingTime;
+                        console.log("loopingTime: " + loopingTime);
+                    }
+                    setTimeout(startBuildingsLoop, loopingTime * buildingList.length);
+                }
+        */
+
     });
 
     $(".buildingItem").click(function () {

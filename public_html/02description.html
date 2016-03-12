@@ -55,14 +55,15 @@
         var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
         window.setTimeout(startLoopingLoopDescriptions, waitFor * 1000); // wait to be synced so it can start looping
-        // startLoopingLoopDescriptions(); // FOR TESTING PURPOSE. Don't need to wait for the seconds to be 00
+        //        startLoopingLoopDescriptions(); // FOR TESTING PURPOSE. Don't need to wait for the seconds to be 00
 
         function startLoopingLoopDescriptions() { // big loop for the for-loop
             console.log("(RE)STARTING big loop for descriptions");
-            setInterval(starDescriptionsLoop, loopingTime * buildingList.length + 1);
+            startDescriptionsLoop();
+            setInterval(startDescriptionsLoop, loopingTime * buildingList.length + 1);
         }
 
-        function starDescriptionsLoop() {
+        function startDescriptionsLoop() {
             var internalLoopTime = loopingTime;
             console.log("(RE) STARTING looping descriptions buildings");
 

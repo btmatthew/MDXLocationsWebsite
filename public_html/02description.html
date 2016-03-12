@@ -77,12 +77,16 @@
                 })(buildingList[i].description, buildingList[i].image);
                 console.log("internalLoopTime: " + internalLoopTime);
             }
-        }
-    });
 
-    $(".buildingItem").click(function () {
-        $(".buildingItem").children().removeClass("selected"); // remove highlights from all others
-        $(this).children().toggleClass("selected"); // highlights selected one
+            $.each($('.buildingItem'), function (index, value) {
+                console.log(index + ':' + $(value).children().text());
+                setTimeout(function () { // wait few seconds before going to the next building
+                    $(".buildingItem").children().removeClass("selected"); // remove highlights from all others
+                    $(value).children().toggleClass("selected");
+                    console.log(".selected class added to current building. Hopefully!")
+                }, internalLoopTime += loopingTime); // add enough waiting time between each building
+            });
+        }
     });
 </script>
 

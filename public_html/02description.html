@@ -77,31 +77,6 @@
                 console.log("internalLoopTime: " + internalLoopTime);
             }
         }
-
-
-        /*
-                window.setTimeout(startBuildingsLoop, waitFor * 1000);
-
-                function startBuildingsLoop() {
-                    console.log("START startBuildingsLoop")
-
-                    var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
-
-                    for (var i = 0; i < buildingList.length; i++) {
-                        (function (description, image) {
-                            setTimeout(function () {
-                                document.getElementById("buildingDescription").innerHTML = '<p>' + description + '</p>';
-                                document.getElementById('buildingImage').src = image;
-                                console.log("Description/image changed!");
-                            }, loopingTime);
-                        })(buildingList[i].description, buildingList[i].image);
-                        loopingTime += loopingTime;
-                        console.log("loopingTime: " + loopingTime);
-                    }
-                    setTimeout(startBuildingsLoop, loopingTime * buildingList.length);
-                }
-        */
-
     });
 
     $(".buildingItem").click(function () {

@@ -36,7 +36,32 @@
 </body>
 <script>
     $(window).load(function () {
+        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
+        window.setTimeout(startLoopingLoopMap, waitFor * 1000); // wait to be synced so it can start looping
+
+        function startLoopingLoopMap() { // loop the loop non-stop
+            console.log("(RE)STARTING big loop for map");
+            setInterval(startMapLoop, loopingTime * buildingList.length + 1);
+        }
+
+        function startMapLoop() {
+            var internalLoopTime = loopingTime;
+            console.log("(RE) STARTING looping map buildings");
+
+            for (var i = 0; i < buildingList.length; i++) { // go through all buildings
+                (function (latLng, zoom) { // pass the location and zoom level
+                    setTimeout(function () { // wait few seconds before going to the next building
+                        map.setCenter(latLng); // change map location
+                        map.setZoom(zoom) // change zoom level
+                        console.log("Map changed! " + i);
+                    }, internalLoopTime += loopingTime);
+                })(buildingList[i].location, buildingList[i].zoom);
+                console.log("internalLoopTime: " + internalLoopTime);
+            }
+        }
+
+        /*
         window.setTimeout(startMapLoop, waitFor * 1000);
 
         function startMapLoop() {
@@ -44,19 +69,21 @@
 
             var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
-            for (var i = 0; i < buildingList.length; i++) {
-                (function (latLng, zoom) {
-                    setTimeout(function () {
-                        map.setCenter(latLng);
-                        map.setZoom(zoom)
+            for (var i = 0; i < buildingList.length; i++) { // go through all buildings
+                (function (latLng, zoom) { // pass the location and zoom level
+                    setTimeout(function () { // wait few seconds before going to the next building
+                        map.setCenter(latLng);  // change map location
+                        map.setZoom(zoom)   // change zoom level
                         console.log("Map changed!");
                     }, loopingTime);
                 })(buildingList[i].location, buildingList[i].zoom);
                 loopingTime += loopingTime;
                 console.log("loopingTime: " + loopingTime);
             }
-            setTimeout(startMapLoop, loopingTime * buildingList.length);
+            setTimeout(startMapLoop, loopingTime * buildingList.length); // restart whole loop
         }
+*/
+
     });
 </script>
 

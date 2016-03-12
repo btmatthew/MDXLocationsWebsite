@@ -1,13 +1,13 @@
 var currentSecs = new Date().getUTCSeconds();
 var waitFor = 60 - currentSecs;
-var loopingTime = 3000;
+var loopingTime = 2000;
 console.log("Wait for: " + waitFor);
 
 var imgPath = "./img/building/";
 
 var collegeBuilding = {
     name: "College Building",
-    description: "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create aspace for staff and students to study, meet, relax and enjoy events runthroughout the year.",
+    description: "The College Building is the heart of Hendon Campus. The quadrangle is covered by a stunning glassroof based on the design of a similar structure at the British Museum.High quality teaching rooms are set around the Quadrangle to create a space for staff and students to study, meet, relax and enjoy events runthroughout the year.",
     image: imgPath + "collegeBuilding.jpg",
     location: {
         lat: 51.5898175,

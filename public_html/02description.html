@@ -15,7 +15,7 @@
     <!-- START bottom left screens-->
     <div id="buildingList">
         <div class="buildingItem" onclick="changeLocation(collegeBuilding)">
-            <p class="selected">College Building</p>
+            <p class="">College Building</p>
         </div>
         <div class="buildingItem" onclick="changeLocation(hatchcroft)">
             <p>Hatchcroft</p>
@@ -55,12 +55,23 @@
         var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
 
         window.setTimeout(startLoopingLoopDescriptions, waitFor * 1000); // wait to be synced so it can start looping
-        //        startLoopingLoopDescriptions(); // FOR TESTING PURPOSE. Don't need to wait for the seconds to be 00
+        window.setTimeout(startLooppingSelectedBuildingMenu, waitFor * 1000); // wait to be synced so it can start looping
+
+
+        // FOR TESTING PURPOSE. Don't need to wait for the seconds to be 00
+        //        startLoopingLoopDescriptions();
+        //        startLooppingSelectedBuildingMenu();
 
         function startLoopingLoopDescriptions() { // big loop for the for-loop
             console.log("(RE)STARTING big loop for descriptions");
             startDescriptionsLoop();
             setInterval(startDescriptionsLoop, loopingTime * buildingList.length + 1);
+        }
+
+        function startLooppingSelectedBuildingMenu() { // big loop for the for-loop
+            console.log("(RE)STARTING big loop for left menu style");
+            changeSelectedBuildingMenu();
+            setInterval(changeSelectedBuildingMenu, loopingTime * buildingList.length + 1);
         }
 
         function startDescriptionsLoop() {
@@ -78,6 +89,10 @@
                 console.log("internalLoopTime: " + internalLoopTime);
             }
 
+        }
+
+        function changeSelectedBuildingMenu() {
+            var internalLoopTime = loopingTime;
             $.each($('.buildingItem'), function (index, value) {
                 console.log(index + ':' + $(value).children().text());
                 setTimeout(function () { // wait few seconds before going to the next building

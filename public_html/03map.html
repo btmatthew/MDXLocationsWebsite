@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="buildings.js"></script>
 </head>
 
 <body>
@@ -32,6 +34,35 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Byec93S-QdsWmaxWQI_m757RbSEmv-M&callback=initMap" async defer></script>
     <!-- END bottom right screens-->
 </body>
-<script src="buildings.js"></script>
+<script>
+    $(window).load(function () {
+        var buildingList = [collegeBuilding, hatchcroft, hendonTownHall, theGrove, mdxHouse, theSheppardLibrary, williamsBuilding, usherHall];
+
+        window.setTimeout(startLoopingLoopMap, waitFor * 1000); // wait to be synced so it can start looping
+        //        startLoopingLoopMap(); // FOR TESTING PURPOSE. Don't need to wait for the seconds to be 00
+
+        function startLoopingLoopMap() { // big loop for the for-loop
+            console.log("(RE)STARTING big loop for map");
+            startMapLoop();
+            setInterval(startMapLoop, loopingTime * buildingList.length + 1);
+        }
+
+        function startMapLoop() {
+            var internalLoopTime = loopingTime;
+            console.log("(RE) STARTING looping map buildings");
+
+            for (var i = 0; i < buildingList.length; i++) { // go through all buildings
+                (function (latLng, zoom) { // pass the location and zoom level
+                    setTimeout(function () { // wait few seconds before going to the next building
+                        map.setCenter(latLng); // change map location
+                        map.setZoom(zoom) // change zoom level
+                        console.log("Map changed! ");
+                    }, internalLoopTime += loopingTime); // add enough waiting time between each building
+                })(buildingList[i].location, buildingList[i].zoom);
+                console.log("internalLoopTime: " + internalLoopTime);
+            }
+        }
+    });
+</script>
 
 </html>

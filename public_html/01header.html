@@ -14,11 +14,30 @@
         <div id="mdxLogo"><img src="./img/london-logo-white.png" /></div>
         <div id="buildingName"> Middlesex University</div>
         <div id="dateAndTime">
-            <p>Date</p>
-            <p>Time</p>
+            <p>16th March 2016</p>
+            <p id="timeSpan">13:37:12</p>
         </div>
     </div>
     <!-- END top screen-->
 </body>
+<script>
+    (function () {
+        function checkTime(i) {
+            return (i < 10) ? "0" + i : i;
+        }
+
+        function startTime() {
+            var today = new Date(),
+                h = checkTime(today.getHours()),
+                m = checkTime(today.getMinutes()),
+                s = checkTime(today.getSeconds());
+            document.getElementById('timeSpan').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () {
+                startTime()
+            }, 500);
+        }
+        startTime();
+    })();
+</script>
 
 </html>

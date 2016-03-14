@@ -134,6 +134,26 @@ body {
     letter-spacing: 50px;
 }
 
+#dateAndTime {
+    padding-top: 0;
+    margin: 0;
+    display: block;
+    width: 16%;
+    height: 100%;
+    float: right;
+}
+
+#dateAndTime p {
+    font-family: 'dax-light', arial, sans-serif;
+    font-size: 18vh;
+}
+/*
+#dateSpan,
+#timeSpan {
+    font-family: 'dax-light', arial, sans-serif;
+    font-size: 18vh;
+}*/
+
 
 /* END - 01header.html */
 
@@ -239,13 +259,3 @@ body {
 
 
 /* START - 03map.html */
-
-#dateAndTime {
-    display: block;
-    width: 16.5%;
-    height: 100%;
-    padding: 0;
-    float: right;
-    display: inline-block;
-    vertical-align: middle;
-}

@@ -24,7 +24,7 @@ var hatchcroft = {
         lat: 51.5891294,
         lng: -0.2291432
     },
-    zoom: 23
+    zoom: 22
 };
 
 var hendonTownHall = {
@@ -46,7 +46,7 @@ var theGrove = {
         lat: 51.588753,
         lng: -0.2304913
     },
-    zoom: 19
+    zoom: 22
 };
 
 var mdxHouse = {
@@ -68,7 +68,7 @@ var theSheppardLibrary = {
         lat: 51.5904446,
         lng: -0.229573
     },
-    zoom: 23
+    zoom: 22
 };
 
 var williamsBuilding = {
@@ -90,6 +90,6 @@ var usherHall = {
         lat: 51.589485,
         lng: -0.2272254
     },
-    zoom: 23
+    zoom: 22
 };
 /* END building objects */

@@ -13,7 +13,7 @@ var collegeBuilding = {
         lat: 51.5898175,
         lng: -0.2289726
     },
-    zoom: 23
+    zoom: 21
 };
 
 var hatchcroft = {
@@ -22,9 +22,9 @@ var hatchcroft = {
     image: imgPath + "hatchcroft.jpg",
     location: {
         lat: 51.5891294,
-        lng: -0.2291432
+        lng: -0.2291174
     },
-    zoom: 22
+    zoom: 20
 };
 
 var hendonTownHall = {
@@ -32,10 +32,10 @@ var hendonTownHall = {
     description: "The Hendon Town Hall, which was built in 1901, features original council chambers which provide the perfect venue to hold moots (mock court), as well as law lectures and debates.",
     image: imgPath + "hendonTownHall.jpg",
     location: {
-        lat: 51.58983943,
-        lng: -0.2295362
+        lat: 51.5880869,
+        lng: -0.2293698
     },
-    zoom: 23
+    zoom: 21
 };
 
 var theGrove = {
@@ -43,10 +43,10 @@ var theGrove = {
     description: "Our £80 million Grove is home to some of the best creative facilities in the UK. The building houses state-of-the-art TV studios, workshops for fashion, textile and jewellery design, a ceramics studio, TV and film production suites, 3D workshops and extensive photography facilities.",
     image: imgPath + "theGrove.jpg",
     location: {
-        lat: 51.588753,
-        lng: -0.2304913
+        lat: 51.5885509,
+        lng: -0.2304827
     },
-    zoom: 22
+    zoom: 20
 };
 
 var mdxHouse = {
@@ -54,10 +54,10 @@ var mdxHouse = {
     description: "MDX House is our dedicated student entertainment and social space which houses a student bar and eating outlets. It also serves as a performance venue and an area for you to relax with your friends and play some pool. It is also home to our Fitness Pod, the University's flagship fitness facility.",
     image: imgPath + "mdxHouse.jpg",
     location: {
-        lat: 51.5899574,
-        lng: -0.2308205
+        lat: 51.5897686,
+        lng: -0.2306201
     },
-    zoom: 23
+    zoom: 21
 };
 
 var theSheppardLibrary = {
@@ -65,10 +65,10 @@ var theSheppardLibrary = {
     description: "The Sheppard Library is open 24 hours a day, seven days a week during term time. Our collection encompasses more than half a million items, including 350,000 books and e-books and over 24,000 online journals. The library is home to more than 1,000 study areas and 600 computing spaces",
     image: imgPath + "theSheppardLibrary.jpg",
     location: {
-        lat: 51.5904446,
-        lng: -0.229573
+        lat: 51.5902244,
+        lng: -0.2295325
     },
-    zoom: 22
+    zoom: 20
 };
 
 var williamsBuilding = {
@@ -76,10 +76,10 @@ var williamsBuilding = {
     description: "The Williams Building is our hub for students studying Business and Law at Middlesex, and home to Library@Williams, a dedicated research and study space.",
     image: imgPath + "williamsBuilding.png",
     location: {
-        lat: 51.5905489,
-        lng: -0.2285415
+        lat: 51.5903085,
+        lng: -0.2286179
     },
-    zoom: 23
+    zoom: 21
 };
 
 var usherHall = {
@@ -87,9 +87,9 @@ var usherHall = {
     description: "Usher Hall is one of Middlesex University's own halls which is managed by our partner Viridian Housing. Staying at this bright and modern accommodation, you will have campus life on your doorstep.",
     image: imgPath + "usherHall.jpg",
     location: {
-        lat: 51.589485,
-        lng: -0.2272254
+        lat: 51.5892778,
+        lng: -0.2271425
     },
-    zoom: 22
+    zoom: 20
 };
 /* END building objects */

@@ -125,7 +125,7 @@ body {
 
 #buildingName {
     float: left;
-    width: 82.5%;
+    width: 66%;
     padding: 0;
     white-space: nowrap;
     font-size: 50vh;
@@ -239,3 +239,13 @@ body {
 
 
 /* START - 03map.html */
+
+#dateAndTime {
+    display: block;
+    width: 16.5%;
+    height: 100%;
+    padding: 0;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,6 +1,6 @@
 var currentSecs = new Date().getUTCSeconds();
 var waitFor = 60 - currentSecs;
-var loopingTime = 6000;
+var loopingTime = 25000;
 console.log("Wait for: " + waitFor);
 
 var imgPath = "./img/building/";
